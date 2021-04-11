@@ -1,0 +1,14 @@
+{
+  "name": "usbot",
+  "version": "1.0.0",
+  "description": "us server bot",
+  "main": "main.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Evan Kaneshige",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^12.5.2"
+  }
+}

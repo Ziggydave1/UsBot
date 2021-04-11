@@ -1,0 +1,112 @@
+{
+    "games": [
+        {
+            "name": "Minecraft: Java Edition",
+            "emoji": "MinecraftJavaEdition",
+            "crossplay": true,
+            "range": {
+                "min": 2,
+                "max": 8
+            }
+        },
+        {
+            "name": "GTA Online",
+            "emoji": "GTAOnline",
+            "crossplay": false,
+            "range": {
+                "min": 2,
+                "max": 4
+            }
+        },
+        {
+            "name": "Destiny 2",
+            "emoji": "Destiny2",
+            "crossplay": false,
+            "range": {
+                "min": 3,
+                "max": 6
+            }
+        },
+        {
+            "name": "Battlefront II",
+            "emoji": "BattlefrontII",
+            "crossplay": false,
+            "range": {
+                "min": 3,
+                "max": 5
+            }
+        },
+        {
+            "name": "Sea of Thieves",
+            "emoji": "SeaofThieves",
+            "crossplay": true,
+            "range": {
+                "min": 3,
+                "max": 4
+            }
+        },
+        {
+            "name": "Brawlhalla",
+            "emoji": "Brawlhalla",
+            "crossplay": true,
+            "range": {
+                "min": 2,
+                "max": 4
+            }
+        },
+        {
+            "name": "Roblox",
+            "emoji": "Roblox",
+            "crossplay": true,
+            "range": {
+                "min": 3,
+                "max": 8
+            }
+        },
+        {
+            "name": "Paladins",
+            "emoji": "Paladins",
+            "crossplay": true,
+            "range": {
+                "min": 2,
+                "max": 4
+            }
+        },
+        {
+            "name": "Minecraft: Bedrock Edition",
+            "emoji": "MinecraftBedrockEdition",
+            "crossplay": true,
+            "range": {
+                "min": 2,
+                "max": 6
+            }
+        },
+        {
+            "name": "Apex Legends",
+            "emoji": "ApexLegends",
+            "crossplay": false,
+            "range": {
+                "min": 2,
+                "max": 3
+            }
+        },
+        {
+            "name": "Jackbox",
+            "emoji": "Jackbox",
+            "crossplay": true,
+            "range": {
+                "min": 4,
+                "max": 12
+            }
+        },
+        {
+            "name": "Among Us",
+            "emoji": "AmongUs",
+            "crossplay": true,
+            "range": {
+                "min": 5,
+                "max": 10
+            }
+        }
+    ]
+}

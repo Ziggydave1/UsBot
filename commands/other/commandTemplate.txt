@@ -1,0 +1,16 @@
+Command File:
+module.exports = {
+    name: '',
+    description: '',
+    args: false,
+    guildOnly: false,
+    usage: '',
+    permissions: '',
+    execute(client, message, args) {
+        //Code goes here
+    }
+}
+Config File:
+"command": {
+    "enabled": true
+}

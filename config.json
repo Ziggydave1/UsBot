@@ -1,0 +1,33 @@
+{
+    "prefix": "-",
+    "token": "ODI3NDE5MDc4ODA1MTU5OTU3.YGawEQ.HBK1MIS566SZYOEtY-fRCTTJg1I",
+    "commands": {
+        "ping": {
+            "enabled": true
+        },
+        "enable": {
+            "enabled": true
+        },
+        "disable": {
+            "enabled": true
+        },
+        "toggle": {
+            "enabled": true
+        },
+        "reload": {
+            "enabled": true
+        },
+        "configload": {
+            "enabled": true
+        },
+        "game": {
+            "enabled": true
+        },
+        "clear": {
+            "enabled": true
+        },
+        "server": {
+            "enabled": true
+        }
+    }
+}
