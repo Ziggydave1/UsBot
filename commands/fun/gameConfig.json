@@ -107,6 +107,15 @@
                 "min": 5,
                 "max": 10
             }
+        },
+        {
+            "name": "Krunker",
+            "emoji": "Krunker",
+            "crossplay": true,
+            "range": {
+                "min": 4,
+                "max": 8
+            }
         }
     ]
 }
