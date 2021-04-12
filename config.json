@@ -28,6 +28,9 @@
         },
         "server": {
             "enabled": true
+        },
+        "connect4": {
+            "enabled": true
         }
     }
 }
