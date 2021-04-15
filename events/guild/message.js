@@ -28,6 +28,6 @@ module.exports = (Discord, client, message) => {
         command.execute(client, message, args, commandName, Discord);
     } catch (error) {
         console.error(error);
-        message.send('There was an error with executing the command');
+        message.channel.send('There was an error with executing the command');
     }
 }

@@ -28,6 +28,9 @@
         "server": {
             "enabled": true
         },
+        "gameinfo": {
+            "enabled": true
+        },
         "play": {
             "enabled": true
         }
