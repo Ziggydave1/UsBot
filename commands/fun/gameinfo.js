@@ -8,7 +8,7 @@ module.exports = {
         const config = require('./gameConfig.json');
         const chosenGame = args[0];
         for (const game of config.games) {
-            if (game.emoji === chosenGame)
+            if (game.emoji.toLowerCase() === chosenGame.toLowerCase())
             {
                 const newEmbed = new Discord.MessageEmbed()
                 .setColor(game.color) //Sets the color of the bar on the side of the embed
