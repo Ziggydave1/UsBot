@@ -4,7 +4,7 @@ module.exports = {
     args: true,
     guildOnly: false,
     permissions: false,
-    execute(client, message, args) {
+    execute(client, message, args, Discord) {
         const config = require('./gameConfig.json');
         const chosenGame = args[0];
         for (const game of config.games) {
@@ -20,12 +20,12 @@ module.exports = {
                 .addFields(
                     //{ name: 'Regular field title', value: 'Some value here' }, //Normal field
                     //{ name: '\u200B', value: '\u200B' }, //Adds blank vertical space
-                    { name: 'Crossplay supported', value: game.crossplay ? "Yes" : "No", inline: true }, //Consecutive inline field will display side-by-side
+                    { name: 'Crossplay', value: game.crossplay ? "Yes" : "No", inline: true }, //Consecutive inline field will display side-by-side
                     { name: 'Minimum players', value: game.range.min, inline: true },
                     { name: 'Maximum players', value: game.range.max, inline: true}
                 )
                 //.addField('Inline field title', 'Some value here', true) //This counts as part of the inline field group from the addFields section
-                //.setImage('https://i.imgur.com/wSTFkRM.png') //Adds a large image
+                .setImage(game.imageLink) //Adds a large image
                 //.setTimestamp() //Turns on the timestamp on the footer
                 //.setFooter('Some footer text here', 'https://i.imgur.com/wSTFkRM.png'); //Adds the footer text with the image to the left and the timestamp (if added) to the right
         
