@@ -27,6 +27,9 @@
         },
         "server": {
             "enabled": true
+        },
+        "play": {
+            "enabled": true
         }
     }
 }

@@ -3,12 +3,11 @@ module.exports = (Discord, client, message) => {
     if (!message.content.startsWith(config.prefix) || message.author.bot) return;
     const args = message.content.slice(config.prefix.length).split(/ +/);
     const commandName = args.shift().toLowerCase();
-    if (!client.commands.has(commandName)) return;
-    console.log(`${message.author.tag} in #${message.channel.name}: ${message.content}`);
-    if (!config.commands[commandName].enabled) {
+    const command = client.commands.get(commandName) || client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName));
+    if (!command) return message.channel.send('This command does not exist')
+    if (!config.commands[command.name].enabled) {
         return message.channel.send('That command is not enabled')
     }
-    const command = client.commands.get(commandName);
     if (command.guildOnly && message.channel.type === 'dm') {
         return message.channel.send('I can\'t execute that command inside a DM');
     }
@@ -26,7 +25,7 @@ module.exports = (Discord, client, message) => {
         return message.channel.send(reply);
     }
     try {
-        command.execute(client, message, args, Discord);
+        command.execute(client, message, args, commandName, Discord);
     } catch (error) {
         console.error(error);
         message.send('There was an error with executing the command');
