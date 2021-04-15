@@ -1,6 +1,5 @@
 {
     "prefix": "-",
-    "token": "ODMwOTkzODUxODMyODYwNzEy.YHOxVQ.uHQaweN1KCG6CT-3WjMtTF5ZoF4",
     "commands": {
         "ping": {
             "enabled": true
