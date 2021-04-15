@@ -7,7 +7,11 @@
             "range": {
                 "min": 2,
                 "max": 8
-            }
+            },
+            "description": "Explore randomly generated worlds and build amazing things from the simplest of homes to the grandest of castles. Play in creative mode with unlimited resources or mine deep into the world in survival mode, crafting weapons and armor to fend off the dangerous mobs.",
+            "color": "#BEE249",
+            "logoLink": "https://www.minecraft.net/content/dam/games/minecraft/logos/Minecraft-Java_Keyart_255x383.jpg",
+            "imageLink": "https://store-images.s-microsoft.com/image/apps.608.13510798887677013.5c7792f0-b887-4250-8c4e-4617af9c4509.bcd1385a-ad15-450c-9ddd-3ee80c37121a?mode=scale&q=90&h=1080&w=1920"
         },
         {
             "name": "GTA Online",
@@ -16,7 +20,11 @@
             "range": {
                 "min": 2,
                 "max": 4
-            }
+            },
+            "description": "Grand Theft Auto V for PC also includes Grand Theft Auto Online, with support for 30 players and two spectators. Grand Theft Auto Online for PC will include all existing gameplay upgrades and Rockstar-created content released since the launch of Grand Theft Auto Online, including Heists and Adversary modes.",
+            "color": "#588019",
+            "logoLink": "https://store-images.s-microsoft.com/image/apps.32034.68565266983380288.0f5ef871-88c0-45f7-b108-6aacbc041fcf.9b094362-c51d-49e5-9e92-80710c585fca?mode=scale&q=90&h=300&w=200",
+            "imageLink": "https://cdn.wccftech.com/wp-content/uploads/2014/12/GTA-Online-Heists-11.jpg"
         },
         {
             "name": "Destiny 2",
@@ -25,7 +33,11 @@
             "range": {
                 "min": 3,
                 "max": 6
-            }
+            },
+            "description": "Dive into the free-to-play world of Destiny 2 to experience responsive FPS combat, explore the mysteries of our solar system, customize your guardian with unique gear, and unleash elemental abilities against powerful enemies.",
+            "color": "#A7BFCB",
+            "logoLink": "https://store-images.s-microsoft.com/image/apps.30303.68655995542193491.618ba70a-85c2-47a4-944e-7a9b39528ca8.c3eb629f-7dac-460f-adc2-ba0f395b6c66?mode=scale&q=90&h=300&w=200",
+            "imageLink": "https://gamespot1.cbsistatic.com/uploads/screen_kubrick/1597/15975876/3731771-destiny2.jpg"
         },
         {
             "name": "Battlefront II",
@@ -34,7 +46,11 @@
             "range": {
                 "min": 3,
                 "max": 5
-            }
+            },
+            "description": "Embark on an all-new Battlefront experience from the bestselling STAR WARS™ HD game franchise of all time. Become the hero and play as a fearless trooper, pilot a legendary starfighter, fight as your favorite iconic STAR WARS character, or forge a new path as an elite special forces soldier through an emotionally gripping new STAR WARS story.",
+            "color": "#459CE2",
+            "logoLink": "https://store-images.s-microsoft.com/image/apps.31281.64256825846959382.44b5bc43-437a-4414-83ca-b41ba9e7764a.86abb8aa-f419-4a90-b6aa-cf79b4228f06?mode=scale&q=90&h=300&w=200",
+            "imageLink": "https://assets1.ignimgs.com/2019/12/17/67-sw-battlefront-2-review-blogroll-1576623811222.jpg?width=1280"
         },
         {
             "name": "Sea of Thieves",
@@ -45,7 +61,7 @@
                 "max": 4
             },
             "description": "Sailing and fighting, exploring and looting... the pirate life awaits you! Enjoy total freedom in a shared world bursting with buried treasure, ancient shipwrecks and thrilling ocean battles.",
-            "color": "#BAEDCB",
+            "color": "#4FFDBD",
             "logoLink": "https://store-images.s-microsoft.com/image/apps.16347.14554784103656548.6c0bfca6-ceff-4368-9bde-2fe50f344136.007dce43-6492-46f2-bb2b-2b28df98fc3c?mode=scale&q=90&h=300&w=200",
             "imageLink": "https://cache.escapistmagazine.com/2020/04/seaofthievesemissary.jpg"
         },
@@ -56,7 +72,11 @@
             "range": {
                 "min": 2,
                 "max": 4
-            }
+            },
+            "description": "History’s greatest warriors brawl to prove who’s the best in an epic test of strength and skill. These slugfests are salted with powerful weapons and gadgets. Every weapon you pick up changes your style of play",
+            "color": "#FFD96A",
+            "logoLink": "https://www.brawlhalla.com/c/uploads/2019/09/Logo_BrawlhallaHammer512.png",
+            "imageLink": "https://dicendpads.com/wp-content/uploads/2020/08/brawlhalla-mobile.jpg"
         },
         {
             "name": "Roblox",
@@ -65,7 +85,11 @@
             "range": {
                 "min": 3,
                 "max": 8
-            }
+            },
+            "description": "Roblox is ushering in the next generation of entertainment. Imagine, create, and play together with millions of players across an infinite variety of immersive, user-generated 3D worlds. Roblox is a global platform that brings people together through play.",
+            "color": "#D41F0D",
+            "logoLink": "https://store-images.s-microsoft.com/image/apps.23943.13510798883386282.e6f02eb7-a760-453e-8d79-46d4ec74807e.84e78792-8a8f-4ae3-a7a0-709c45161cf1?mode=scale&q=90&h=300&w=200",
+            "imageLink": "https://assets.rockpapershotgun.com/images/2020/11/roblox.jpg/RPSS/thumbnail/1920x1080/format/jpg/quality/75"
         },
         {
             "name": "Paladins",
@@ -74,7 +98,11 @@
             "range": {
                 "min": 2,
                 "max": 4
-            }
+            },
+            "description": "Join 25+ million players in Paladins, the free-to-play fantasy team-based shooter sensation. Wield guns and magic as a legendary Champion of the Realm, customizing your core set of abilities to play exactly how you want to play.",
+            "color": "#27EAE9",
+            "logoLink": "https://cdn2.unrealengine.com/Diesel%2Fproductv2%2Fpaladins%2Fhome%2FEGS_Paladins_EvilMojoGames_S4-510x680-fe2d232ef229654c285d93cc96bfffbed36cedb7.jpg",
+            "imageLink": "https://avante.biz/wp-content/uploads/Paladins-Strike-wallpapers/Paladins-Strike-wallpapers8.jpg"
         },
         {
             "name": "Minecraft: Bedrock Edition",
@@ -83,7 +111,11 @@
             "range": {
                 "min": 2,
                 "max": 6
-            }
+            },
+            "description": "Explore randomly generated worlds and build amazing things from the simplest of homes to the grandest of castles. Play in creative mode with unlimited resources or mine deep into the world in survival mode, crafting weapons and armor to fend off the dangerous mobs.",
+            "color": "#BEE249",
+            "logoLink": "https://store-images.s-microsoft.com/image/apps.17382.13510798887677013.afcc99fc-bdcc-4b9c-8261-4b2cd93b8845.49beb011-7271-4f15-a78b-422c511871e4?mode=scale&q=90&h=300&w=200",
+            "imageLink": "https://store-images.s-microsoft.com/image/apps.608.13510798887677013.5c7792f0-b887-4250-8c4e-4617af9c4509.bcd1385a-ad15-450c-9ddd-3ee80c37121a?mode=scale&q=90&h=1080&w=1920"
         },
         {
             "name": "Apex Legends",
@@ -92,7 +124,11 @@
             "range": {
                 "min": 2,
                 "max": 3
-            }
+            },
+            "description": "Conquer with character in Apex Legends, a free-to-play* Battle Royale shooter where legendary characters with powerful abilities team up to battle for fame and fortune on the fringes of the Frontier. Master an ever-growing roster of diverse Legends, deep tactical squad play, and bold new innovations in the next evolution of Battle Royale.",
+            "color": "#AB3937",
+            "logoLink": "https://store-images.s-microsoft.com/image/apps.43136.71371076658790719.e99f8f53-72eb-4a77-bf15-167d722fc4b0.ca5d3db2-eff3-4adb-a177-21e6b9a9f473?mode=scale&q=90&h=300&w=200",
+            "imageLink": "https://static0.srcdn.com/wordpress/wp-content/uploads/2020/02/Apex-Legends-Character-Guide.jpg"
         },
         {
             "name": "Jackbox",
@@ -101,7 +137,11 @@
             "range": {
                 "min": 4,
                 "max": 12
-            }
+            },
+            "description": "The team behind YOU DON’T KNOW JACK presents FIVE guffaw-inducing party games in one pack! You’re gonna need more than one party for this. Your phones or tablets are your controllers! For 1-100 players!",
+            "color": "#1653AF",
+            "logoLink": "https://www.insidehook.com/wp-content/uploads/2020/05/Jackbox-Games-Logo.jpg?resize=1200,800",
+            "imageLink": "https://cdn.gamer-network.net/2020/usgamer/Jackbox-List_Header.jpg/EG11/thumbnail/1920x1080/format/jpg/quality/65/jackbox-party-pack-games-ranked-list.jpg"
         },
         {
             "name": "Among Us",
@@ -110,7 +150,11 @@
             "range": {
                 "min": 5,
                 "max": 10
-            }
+            },
+            "description": "An online and local party game of teamwork and betrayal for 4-10 players...in space!",
+            "color": "#C71313",
+            "logoLink": "https://store-images.s-microsoft.com/image/apps.27279.13589262686196899.44b29135-f781-4fb7-a3ae-4a3a5d9e39a8.2ed808d9-f77e-42cb-92e6-db9df7c72b90?mode=scale&q=90&h=300&w=200",
+            "imageLink": "https://progameguides.com/wp-content/uploads/2020/09/among-us-rocketing-popularity.jpg"
         },
         {
             "name": "Krunker",
@@ -119,7 +163,11 @@
             "range": {
                 "min": 4,
                 "max": 8
-            }
+            },
+            "description": "An easy to get into fully moddable first person shooter with advanced movement mechanics. Fully customizable with mods, custom maps and thousands of items to unlock.",
+            "color": "#FAB52F",
+            "logoLink": "https://mykrunker.com/files/2020/08/krunkers_Krunker_Logo-300x169.png",
+            "imageLink": "https://i.ytimg.com/vi/Kczemz24ssE/maxresdefault.jpg"
         }
     ]
 }
