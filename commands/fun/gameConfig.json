@@ -43,7 +43,11 @@
             "range": {
                 "min": 3,
                 "max": 4
-            }
+            },
+            "description": "Sailing and fighting, exploring and looting... the pirate life awaits you! Enjoy total freedom in a shared world bursting with buried treasure, ancient shipwrecks and thrilling ocean battles.",
+            "color": "#BAEDCB",
+            "logoLink": "https://store-images.s-microsoft.com/image/apps.16347.14554784103656548.6c0bfca6-ceff-4368-9bde-2fe50f344136.007dce43-6492-46f2-bb2b-2b28df98fc3c?mode=scale&q=90&h=300&w=200",
+            "imageLink": "https://cache.escapistmagazine.com/2020/04/seaofthievesemissary.jpg"
         },
         {
             "name": "Brawlhalla",
