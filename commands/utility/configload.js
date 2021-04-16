@@ -4,7 +4,7 @@ module.exports = {
     args: false,
     guildOnly: false,
     permissions: 'MANAGE_GUILD',
-    execute(client, message, args) {
+    execute(client, message, args, commandName, Discord) {
         try {
             delete require.cache[require.resolve('../../config.json')];
             const newConfig = require('../../config.json');

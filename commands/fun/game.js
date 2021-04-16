@@ -5,7 +5,7 @@ module.exports = {
     guildOnly: true,
     usage: '<@users playing the game>*one or more',
     permissions: '',
-    execute(client, message, args) {
+    execute(client, message, args, commandName, Discord) {
         const config = require('./gameConfig.json');
         const targets = message.mentions.members;
         const peopleNum = targets.size;

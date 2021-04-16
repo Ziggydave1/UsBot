@@ -4,7 +4,7 @@ module.exports = {
     args: false,
     guildOnly: false,
     permissions: '',
-    execute(client, message, args) {
+    execute(client, message, args, commandName, Discord) {
         message.channel.send('pong!');
     }
 }

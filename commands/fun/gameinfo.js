@@ -4,13 +4,12 @@ module.exports = {
     args: true,
     guildOnly: false,
     permissions: false,
-    execute(client, message, args) {
+    execute(client, message, args, commandName, Discord) {
         const config = require('./gameConfig.json');
         const chosenGame = args[0];
         for (const game of config.games) {
             if (game.emoji.toLowerCase() === chosenGame.toLowerCase())
             {
-                const Discord = require('discord.js');
                 const newEmbed = new Discord.MessageEmbed()
                 .setColor(game.color) //Sets the color of the bar on the side of the embed
                 .setTitle(game.name) //Underneath the author

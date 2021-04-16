@@ -5,7 +5,7 @@ module.exports = {
     usage: '<# of meassages>',
     guildOnly: false,
     permissions: 'MANAGE_MESSAGES',
-    async execute(client, message, args) {
+    async execute(client, message, args, commandName, Discord) {
         if (isNaN(args[0])) return message.channel.send("Please enter a real number");
 
         if (args[0] > 100) return message.channel.send("You can't delete more than 100 messages at once");
