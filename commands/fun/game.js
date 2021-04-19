@@ -7,53 +7,40 @@ module.exports = {
     permissions: '',
     execute(client, message, args, commandName, Discord) {
         const config = require('./gameConfig.json');
-        const targets = message.mentions.members;
-        const peopleNum = targets.size;
+        const players = message.mentions.members;
+        const playerCount = players.size;
+        const xboxId = '829524476998713376';
+        const pcId = '829524517016567858';
 
         let reply = '**The games you can play are:**\n-------------------------------------------';
         let xboxNeeded = false;
         let pcNeeded = false;
-        if (peopleNum == 1) {
+        if (playerCount === 1) {
             return message.channel.send('You are sad and lonely.');
         }
-        for (const target of targets) {
-            const guildMember = target[1];
-            const roles = guildMember._roles;
-            if (roles.includes('829524476998713376') && !roles.includes('829524517016567858')) {
+        for (const player of players.values()) {
+            const roles = player.roles.cache;
+            if (roles.has(xboxId) && !roles.has(pcId)) {
                 xboxNeeded = true;
             }
-            if (roles.includes('829524517016567858') && !roles.includes('829524476998713376')) {
+            if (roles.has(pcId) && !roles.has(xboxId)) {
                 pcNeeded = true;
             }
         }
-        switch (true) {
-            case (xboxNeeded && pcNeeded):
-                for (const game of config.games) {
-                    if (game.crossplay) {
-                        if (game.range.min <= peopleNum && peopleNum <= game.range.max) {
-                            if (game.emoji) {
-                                const emoji = message.guild.emojis.cache.find(r => r.name == game.emoji);
-                                reply += `\n${emoji} *\`${game.name}\`*`;
-                            } else {
-                                reply += `\n:question: *\`${game.name}\`*`;
-                            }
-                        }
+
+        for (const game of config.games) {
+            //If crossplay is supported, it's always playable. If crossplay isn't required, every game is playable.
+            if (game.crossplay || !(xboxNeeded && pcNeeded)) {
+                if (game.range.min <= playerCount && playerCount <= game.range.max) {
+                    if (game.emoji) {
+                        const emoji = message.guild.emojis.cache.find(r => r.name === game.emoji);
+                        reply += `\n${emoji} *\`${game.name}\`*`;
+                    } else {
+                        reply += `\n:question: *\`${game.name}\`*`;
                     }
                 }
-                break;
-            case (!xboxNeeded || !pcNeeded):
-                for (const game of config.games) {
-                    if (game.range.min <= peopleNum && peopleNum <= game.range.max) {
-                        if (game.emoji) {
-                            const emoji = message.guild.emojis.cache.find(r => r.name == game.emoji);
-                            reply += `\n${emoji} *\`${game.name}\`*`;
-                        } else {
-                            reply += `\n:question: *\`${game.name}\`*`;
-                        }
-                    }
-                }
-                break;
-        }
+            }
+        }    
         message.channel.send(reply);
     }
 }
