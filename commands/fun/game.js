@@ -9,9 +9,7 @@ module.exports = {
         const config = require('./gameConfig.json');
         const players = message.mentions.members;
         const playerCount = players.size;
-        const xboxId = '829524476998713376';
-        const pcId = '829524517016567858';
-
+        
         let reply = '**The games you can play are:**\n-------------------------------------------';
         let xboxNeeded = false;
         let pcNeeded = false;
@@ -20,10 +18,10 @@ module.exports = {
         }
         for (const player of players.values()) {
             const roles = player.roles.cache;
-            if (roles.has(xboxId) && !roles.has(pcId)) {
+            if (roles.find(role => role.name === "Xbox") && !roles.find(role => role.name === "PC")) {
                 xboxNeeded = true;
             }
-            if (roles.has(pcId) && !roles.has(xboxId)) {
+            if (roles.find(role => role.name === "PC") && !roles.find(role => role.name === "Xbox")) {
                 pcNeeded = true;
             }
         }
