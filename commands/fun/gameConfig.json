@@ -168,6 +168,19 @@
             "color": "#FAB52F",
             "logoLink": "https://kenovis.es/wp-content/uploads/2020/05/krunker-logo-1024x576.png",
             "imageLink": "https://i.ytimg.com/vi/Kczemz24ssE/maxresdefault.jpg"
+        },
+        {
+            "name": "Astroneer",
+            "emoji": "Astroneer",
+            "crossplay": true,
+            "range": {
+                "min": 2,
+                "max": 4
+            },
+            "description": "Explore and reshape distant worlds! Astroneer is set during the 25th century Intergalactic Age of Discovery, where Astroneers explore the frontiers of outer space, risking their lives in harsh environments to unearth rare discoveries and unlock the mysteries of the universe.",
+            "color": "#4DC9CA",
+            "logoLink": "https://store-images.s-microsoft.com/image/apps.17703.13510798887933723.57e43f19-4066-429e-b1a2-caea56e427b4.f555e1de-d116-4ab1-bed1-408a78622ba6?mode=scale&q=90&h=300&w=200",
+            "imageLink": "https://th.bing.com/th/id/R0f4ea8a5ffb387b6cba1837926a2aa95?rik=qVyrQpgoanN8qg&pid=ImgRaw"
         }
     ]
 }
