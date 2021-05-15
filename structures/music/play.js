@@ -100,3 +100,8 @@ const stopSong = (message, serverQueue) => {
     serverQueue.songs = [];
     serverQueue.connection.dispatcher.end();
 }
+
+/*
+This file is the current updated play command
+It doesnt use the music player to separate the queue form the running instance
+*/

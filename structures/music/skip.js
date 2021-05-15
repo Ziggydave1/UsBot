@@ -1,0 +1,3 @@
+/*
+Unimplemented skip command
+*/

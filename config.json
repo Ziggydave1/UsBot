@@ -33,6 +33,9 @@
         },
         "play": {
             "enabled": true
+        },
+        "music": {
+            "enabled": true
         }
     }
 }
