@@ -33,6 +33,9 @@
         },
         "play": {
             "enabled": true
+        },
+        "mygames": {
+            "enabled": true
         }
     }
 }
