@@ -36,6 +36,9 @@
         },
         "mygames": {
             "enabled": true
+        },
+        "lfg": {
+            "enabled": true
         }
     }
 }
