@@ -1,5 +1,5 @@
 {
-    "users": [
+    "players": [
         {
             "id": "511266530634498068",
             "games": [
@@ -8,10 +8,7 @@
                 "destiny2",
                 "apexlegends",
                 "brawlhalla",
-                "jackbox",
-                "minecraftbedrockedition",
-                "minecraftjavaedition",
-                "krunker"
+                "roblox"
             ]
         }
     ]

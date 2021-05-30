@@ -5,10 +5,10 @@ module.exports = {
     guildOnly: false,
     permissions: false,
     execute(client, message, args, commandName, Discord) {
-        const config = require('./gameConfig.json');
+        const gameList = require('./gameList.json');
         const chosenGame = args[0];
 
-        const game = config.games.find(entry => entry.emoji.toLowerCase() === chosenGame.toLowerCase());
+        const game = gameList.games.find(entry => entry.id.toLowerCase() === chosenGame.toLowerCase());
         if (game) {
             const newEmbed = new Discord.MessageEmbed()
                 .setColor(game.color)
