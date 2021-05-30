@@ -42,7 +42,7 @@ module.exports = {
                 if (gamePlayer.games.length === 0) {
                     return message.channel.send(`\`${mentionedPlayer[1].user.username}\` has no games`);
                 }
-                if (gamePlayer.games.indexOf(game.id) === -1) {
+                if (gamePlayer.games.indexOf(game.id.toLowerCase()) === -1) {
                     addToReply = false;
                 }
             }

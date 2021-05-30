@@ -9,9 +9,12 @@ module.exports = {
     execute(client, message, args, commandName, Discord) {
         const gamePlayers = require('./gamePlayers.json');
 
-        let player = gamePlayers.players.find(entry => entry.id === message.author.id);
+        //targetedMember is type GuildMember
+        const targetedMember = message.mentions.members.size === 0 ? message.member : message.mentions.members.first();
+
+        let player = gamePlayers.players.find(entry => entry.id === targetedMember.user.id);
         if (!player) {
-            const newPlayer = { 'id': message.author.id, 'games': []};
+            const newPlayer = { 'id': targetedMember.user.id, 'games': []};
             gamePlayers.players.push(newPlayer);
             player = newPlayer;
             const jsonString = JSON.stringify(gamePlayers, null, 4);
@@ -39,8 +42,8 @@ module.exports = {
                 });
                 const newEmbed = new Discord.MessageEmbed()
                     .setColor('#FFFFFF')
-                    .setTitle(message.author.username)
-                    .setThumbnail(message.author.displayAvatarURL())
+                    .setTitle(targetedMember.user.username)
+                    .setThumbnail(targetedMember.user.displayAvatarURL())
                     .addField('Games owned', gamesList ? gamesList : 'None')
                 message.channel.send(newEmbed);
                 break;
@@ -57,11 +60,11 @@ module.exports = {
                     break;
                 }
 
-                if (player.games.includes(args[1])) {
+                if (player.games.includes(args[1].toLowerCase())) {
                     message.channel.send('Game already added');
                     break;
                 }
-                player.games.push(args[1]);
+                player.games.push(args[1].toLowerCase());
                 jsonString = JSON.stringify(gamePlayers, null, 4);
                 fs.writeFile('./commands/fun/gamePlayers.json', jsonString, err => {
                     if (err) {
@@ -79,11 +82,11 @@ module.exports = {
                     break;
                 }
                 
-                if (!player.games.includes(args[1])) {
+                if (!player.games.includes(args[1].toLowerCase())) {
                     message.channel.send('Game not owned');
                     break;
                 }
-                player.games.splice(player.games.indexOf(args[1]), 1);
+                player.games.splice(player.games.indexOf(args[1].toLowerCase()), 1);
                 jsonString = JSON.stringify(gamePlayers, null, 4);
                 fs.writeFile('./commands/fun/gamePlayers.json', jsonString, err => {
                     if (err) {
