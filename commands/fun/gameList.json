@@ -181,6 +181,32 @@
             "color": "#4DC9CA",
             "logoLink": "https://store-images.s-microsoft.com/image/apps.17703.13510798887933723.57e43f19-4066-429e-b1a2-caea56e427b4.f555e1de-d116-4ab1-bed1-408a78622ba6?mode=scale&q=90&h=300&w=200",
             "imageLink": "https://th.bing.com/th/id/R0f4ea8a5ffb387b6cba1837926a2aa95?rik=qVyrQpgoanN8qg&pid=ImgRaw"
+        },
+        {
+            "name": "Sid Meier’s Civilization VI",
+            "id": "CivVI",
+            "crossplay": false,
+            "range": {
+                "min": 2,
+                "max": 8
+            },
+            "description": "Originally created by legendary game designer Sid Meier, Civilization is a turn-based strategy game in which you attempt to build an empire to stand the test of time. Become Ruler of the World by establishing and leading a civilization from the Stone Age to the Information Age. Wage war, conduct diplomacy, advance your culture, and go head-to-head with history’s greatest leaders as you attempt to build the greatest civilization the world has ever known.",
+            "color": "#DCBB89",
+            "logoLink": "https://store-images.s-microsoft.com/image/apps.16669.13977311502771693.72aef738-75a3-4db8-97c9-280f3b8c4daa.c2290e57-1525-4b4a-94d7-d652b1ff3520?mode=scale&q=90&h=300&w=200",
+            "imageLink": "https://th.bing.com/th/id/Rca7da268ed74626ca0d6dc5bd5126d94?rik=CuLH1fPGDM%2faFg&riu=http%3a%2f%2fgameplay.tips%2fuploads%2fposts%2f2016-10%2f1477512385_civilization-vi.jpg&ehk=pfCg8r45xwnKMKs1IhYWj5mYj2FQ7S9KqaZ0wb3kAX0%3d&risl=&pid=ImgRaw"
+        },
+        {
+            "name": "Cities: Skylines",
+            "id": "CitiesSkylines",
+            "crossplay": false,
+            "range": {
+                "min": 2,
+                "max": 2
+            },
+            "description": "Cities: Skylines is a modern take on the classic city simulation. The game introduces new game play elements to realize the thrill and hardships of creating and maintaining a real city whilst expanding on some well-established tropes of the city building experience.",
+            "color": "#65CCEF",
+            "logoLink": "https://cdn-products.eneba.com/resized-products/fd789e2ed96b5fac6cce90bef9148ae2_350x200_1x-0.jpg",
+            "imageLink": "https://xblafans.com/wp-content/uploads/2017/02/cities-skylines-13-700x393.png"
         }
     ]
 }
