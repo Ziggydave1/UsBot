@@ -5,7 +5,7 @@ module.exports = {
     guildOnly: true,
     usage: '<@users playing the game>*one or more',
     permissions: '',
-    execute(client, message, args, commandName, Discord) {
+    async execute(client, message, args, commandName, Discord) {
         const gameList = require('./gameList.json');
 
         //mentionedPlayers is of type Collection<Snowflake, GuildMember>
@@ -50,9 +50,10 @@ module.exports = {
                 //If crossplay is supported, it's always playable. If crossplay isn't required, every game is playable.
                 if (game.crossplay || !(xboxNeeded && pcNeeded)) {
                     if (game.range.min <= playerCount && playerCount <= game.range.max) {
-                        const emoji = message.guild.emojis.cache.find(e => e.name === game.id);
+                        let emoji = message.guild.emojis.cache.find(e => e.name === game.id);
                         if (!emoji) {
-                            emoji = ':question:';              
+                            await message.guild.emojis.create(`./assets/emoji/${game.id}.png`, game.id);
+                            emoji = message.guild.emojis.cache.find(e => e.name === game.id);
                         }
                         reply += `\n${emoji} *\`${game.name}\`*`;
                     }
