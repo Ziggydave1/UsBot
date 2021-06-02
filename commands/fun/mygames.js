@@ -6,7 +6,7 @@ module.exports = {
     guildOnly: true,
     usage: '<@users playing the game>*one or more',
     permissions: '',
-    execute(client, message, args, commandName, Discord) {
+    async execute(client, message, args, commandName, Discord) {
         const gamePlayers = require('./gamePlayers.json');
 
         //targetedMember is type GuildMember
@@ -32,11 +32,12 @@ module.exports = {
             case ('view'):
                 //This displays user profile info
                 let gamesList = '';
-                player.games.forEach(gameName => {
+                player.games.forEach(async gameName => {
                     const game = gameList.games.find(entry => entry.id.toLowerCase() === gameName.toLowerCase());
-                    let emoji = message.guild.emojis.cache.find(e => e.name === game.id)
+                    let emoji = message.guild.emojis.cache.find(e => e.name === game.id);
                     if (!emoji) {
-                        emoji = ':question:';
+                        await message.guild.emojis.create(`./assets/emoji/${game.id}.png`, game.id);
+                        emoji = message.guild.emojis.cache.find(e => e.name === game.id);
                     }
                     gamesList = gamesList + `${emoji} ${game.name} \n`;
                 });
