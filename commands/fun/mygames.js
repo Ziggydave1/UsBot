@@ -14,7 +14,7 @@ module.exports = {
 
         let player = gamePlayers.players.find(entry => entry.id === targetedMember.user.id);
         if (!player) {
-            const newPlayer = { 'id': targetedMember.user.id, 'games': []};
+            const newPlayer = { 'id': targetedMember.user.id, 'games': [] };
             gamePlayers.players.push(newPlayer);
             player = newPlayer;
             const jsonString = JSON.stringify(gamePlayers, null, 4);
@@ -54,7 +54,7 @@ module.exports = {
                     message.channel.send('Correct usage is \`-mygames add <game name>\`');
                     break;
                 }
-                
+
                 const game = gameList.games.find(entry => entry.id.toLowerCase() === args[1].toLowerCase());
                 if (!game) {
                     message.channel.send('Game not found');
@@ -82,7 +82,7 @@ module.exports = {
                     message.channel.send('Correct usage is \`-mygames remove <game name>\`');
                     break;
                 }
-                
+
                 if (!player.games.includes(args[1].toLowerCase())) {
                     message.channel.send('Game not owned');
                     break;
@@ -98,6 +98,6 @@ module.exports = {
                     }
                 })
                 break;
-        }    
+        }
     }
 }
