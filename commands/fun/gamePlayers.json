@@ -9,7 +9,9 @@
                 "apexlegends",
                 "brawlhalla",
                 "roblox",
-                "civvi"
+                "civvi",
+                "minecraftjavaedition",
+                "minecraftbedrockedition"
             ]
         },
         {
@@ -17,9 +19,23 @@
             "games": [
                 "amongus",
                 "minecraftjavaedition",
-                "paladins",
                 "battlefrontii",
                 "civvi"
+            ]
+        },
+        {
+            "id": "492452900744855563",
+            "games": []
+        },
+        {
+            "id": "617139301783699456",
+            "games": [
+                "minecraftjavaedition",
+                "roblox",
+                "apexlegends",
+                "amongus",
+                "gtaonline",
+                "seaofthieves"
             ]
         }
     ]
