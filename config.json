@@ -39,6 +39,9 @@
         },
         "lfg": {
             "enabled": true
+        },
+        "mcserver": {
+            "enabled": true
         }
     }
 }

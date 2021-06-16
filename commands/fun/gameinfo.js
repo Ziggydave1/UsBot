@@ -10,17 +10,21 @@ module.exports = {
 
         const game = gameList.games.find(entry => entry.id.toLowerCase() === chosenGame.toLowerCase());
         if (game) {
+            const thumbnailAttachment = new Discord.MessageAttachment(`./assets/thumbnail/${game.id}.jpg`, `${game.id}_thumbnail.jpg`);
+            const imageAttachment = new Discord.MessageAttachment(`./assets/image/${game.id}.jpg`, `${game.id}_image.jpg`);
             const newEmbed = new Discord.MessageEmbed()
                 .setColor(game.color)
                 .setTitle(game.name)
                 .setDescription(game.description)
-                .setThumbnail(game.logoLink)
+                .attachFiles(thumbnailAttachment)
+                .attachFiles(imageAttachment)
+                .setThumbnail(`attachment://${game.id}_thumbnail.jpg`)
                 .addFields(
                     { name: 'Crossplay', value: game.crossplay ? "Yes" : "No", inline: true },
                     { name: 'Minimum players', value: game.range.min, inline: true },
                     { name: 'Maximum players', value: game.range.max, inline: true }
                 )
-                .setImage(game.imageLink);
+                .setImage(`attachment://${game.id}_image.jpg`);
             message.channel.send(newEmbed);
         } else {
             message.channel.send('Game not found.');
