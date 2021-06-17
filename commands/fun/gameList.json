@@ -292,6 +292,23 @@
             "color": "#65CCEF",
             "logoLink": "https://cdn-products.eneba.com/resized-products/fd789e2ed96b5fac6cce90bef9148ae2_350x200_1x-0.jpg",
             "imageLink": "https://xblafans.com/wp-content/uploads/2017/02/cities-skylines-13-700x393.png"
+        },
+        {
+            "name": "Overcooked! 2",
+            "id": "Overcooked2",
+            "aliases": [
+                "overcooked2",
+                "overcooked 2",
+                "overcooked",
+                "overcooked! 2"
+            ],
+            "crossplay": false,
+            "range": {
+                "min": 2,
+                "max": 4
+            },
+            "description": "Overcooked returns with a brand-new helping of chaotic cooking action! Journey back to the Onion Kingdom and assemble your team of chefs in classic couch co-op or online play for up to four players. Hold onto your aprons … it’s time to save the world (again!)",
+            "color": "#FEBA1F"
         }
     ]
 }
