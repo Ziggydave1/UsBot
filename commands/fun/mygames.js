@@ -32,9 +32,21 @@ module.exports = {
         let game = ""
         
         switch (args[0]) {
+            case ('viewall'):
+                let reply = "**Games:**";
+                for (const game of gameList.games) {
+                    let emoji = message.guild.emojis.cache.find(e => e.name === game.id);
+                if (!emoji) {
+                    await message.guild.emojis.create(`./assets/emoji/${game.id}.png`, game.id);
+                    emoji = message.guild.emojis.cache.find(e => e.name === game.id);
+                }
+                reply += `\n${emoji} *\`${game.name}\`*`;
+                };
+                message.channel.send(reply);
+                break;
             case ('view'):
                 //This displays user profile info
-                let gamesList = '';
+                let playerGames = '';
                 player.games.forEach(async gameName => {
                     game = gameList.games.find(entry => entry.id.toLowerCase() === gameName.toLowerCase());
                     let emoji = message.guild.emojis.cache.find(e => e.name === game.id);
@@ -42,13 +54,13 @@ module.exports = {
                         await message.guild.emojis.create(`./assets/emoji/${game.id}.png`, game.id);
                         emoji = message.guild.emojis.cache.find(e => e.name === game.id);
                     }
-                    gamesList = gamesList + `${emoji} ${game.name} \n`;
+                    playerGames = playerGames + `${emoji} ${game.name} \n`;
                 });
                 const newEmbed = new Discord.MessageEmbed()
                     .setColor('#FFFFFF')
                     .setTitle(targetedMember.user.username)
                     .setThumbnail(targetedMember.user.displayAvatarURL())
-                    .addField('Games owned', gamesList ? gamesList : 'None')
+                    .addField('Games owned', playerGames ? playerGames : 'None')
                 message.channel.send(newEmbed);
                 break;
             case ('add'):
