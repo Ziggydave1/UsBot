@@ -5,7 +5,7 @@ module.exports = {
     args: true,
     guildOnly: true,
     permissions: false,
-    async execute(client, message, args, commandName, Discord) {
+    async execute(client, message, args, commandName, Discord, config) {
         const chosenGame = args[0];
         const gameList = require('./gameList.json');
         const game = gameList.games.find(entry => (entry.id.toLowerCase() === chosenGame.toLowerCase()) || (entry.aliases.includes(chosenGame.toLowerCase())));

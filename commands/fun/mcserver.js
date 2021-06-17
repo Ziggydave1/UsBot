@@ -6,7 +6,7 @@ module.exports = {
     guildOnly: false,
     usage: '<|start <server> |stop <server> |restart <server>|info ?<server>|>',
     permissions: '',
-    execute(client, message, args, commandName, Discord) {
+    execute(client, message, args, commandName, Discord, config) {
         switch (args[0]) {
             case ('start'):
                 if (!args[1]) {

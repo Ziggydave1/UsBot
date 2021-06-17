@@ -6,7 +6,7 @@ module.exports = {
     guildOnly: false,
     usage: '',
     permissions: '',
-    execute(client, message, args, commandName, Discord) {
+    execute(client, message, args, commandName, Discord, config) {
         //Code goes here
     }
 }

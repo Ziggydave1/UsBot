@@ -6,7 +6,7 @@ module.exports = {
     guildOnly: false,
     usage: '<command to be enabled>',
     permissions: 'MANAGE_GUILD',
-    execute(client, message, args, commandName, Discord) {
+    execute(client, message, args, commandName, Discord, config) {
         fs.readFile('./config.json', 'utf8', (err, configuration) => {
             if (err) {
                 console.log('Error reading from disk', err);

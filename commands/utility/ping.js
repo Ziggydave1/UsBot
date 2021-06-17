@@ -4,7 +4,7 @@ module.exports = {
     args: false,
     guildOnly: false,
     permissions: '',
-    execute(client, message, args, commandName, Discord) {
+    execute(client, message, args, commandName, Discord, config) {
         const newEmbed = new Discord.MessageEmbed()
         .setColor('#ffffff')
         .setAuthor('pong!')

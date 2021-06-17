@@ -4,7 +4,7 @@ module.exports = {
     args: false,
     guildOnly: true,
     permissions: '',
-    execute(client, message, args, commandName, Discord) {
+    execute(client, message, args, commandName, Discord, config) {
         message.channel.send(`The server name is: \`${message.guild.name}\`\nTotal members: \`${message.guild.memberCount}\``);
     }
 }

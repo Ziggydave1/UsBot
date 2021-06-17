@@ -6,7 +6,7 @@ module.exports = {
     guildOnly: false,
     usage: '<command to reload>',
     permissions: 'MANAGE_GUILD',
-    execute(client, message, args, commandName, Discord) {
+    execute(client, message, args, commandName, Discord, config) {
         const commandname = args[0].toLowerCase();
         const command = message.client.commands.get(commandname);
         if (!command) return message.channel.send(`There is no command named: ${commandname}`);

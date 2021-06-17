@@ -25,7 +25,7 @@ module.exports = (Discord, client, message) => {
         return message.channel.send(reply);
     }
     try {
-        command.execute(client, message, args, commandName, Discord);
+        command.execute(client, message, args, commandName, Discord, config);
     } catch (error) {
         console.error(error);
         message.channel.send('There was an error with executing the command');

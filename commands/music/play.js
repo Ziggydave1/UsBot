@@ -11,7 +11,7 @@ module.exports = {
     args: false,
     guildOnly: true,
     permissions: '',
-    async execute(client, message, args, commandName, Discord) {
+    async execute(client, message, args, commandName, Discord, config) {
         const voiceChannel = message.member.voice.channel;
         if (!voiceChannel) return message.channel.send('You need to be in a channel to execute this command');
         const permissions = voiceChannel.permissionsFor(message.client.user);

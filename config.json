@@ -2,7 +2,8 @@
     "prefix": "-",
     "commands": {
         "ping": {
-            "enabled": true
+            "enabled": true,
+            "ping-response": "pong!"
         },
         "enable": {
             "enabled": true
@@ -20,7 +21,18 @@
             "enabled": true
         },
         "game": {
-            "enabled": true
+            "enabled": true,
+            "gameListJSON": "./gameList.json",
+            "playableGamesTitle": "**The games you can play are:**\n-------------------------------------------",
+            "onePlayerMentionedResponse": "You are sad and lonely.",
+            "xboxRoleName": "Xbox",
+            "pcRoleName": "PC",
+            "playersJSON": "./gamePlayers.json",
+            "notInPlayerJSONResponse": "\\`${mentionedPlayer[1].user.username}\\` is not a gamer. Use \\`-mygames view\\` to become a gamer.",
+            "noGamesResponse": "\\`${mentionedPlayer[1].user.username}\\` has no games",
+            "emojiAssests": "./assests/emoji/",
+            "emojiAssetType": ".png",
+            "gameListEntry": "\\n${emoji} *\\`${game.name}\\`*"
         },
         "clear": {
             "enabled": true

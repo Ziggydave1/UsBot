@@ -4,7 +4,7 @@ module.exports = {
     args: true,
     guildOnly: false,
     permissions: false,
-    execute(client, message, args, commandName, Discord) {
+    execute(client, message, args, commandName, Discord, config) {
         const gameList = require('./gameList.json');
         const chosenGame = args[0];
 

@@ -6,7 +6,7 @@ module.exports = {
     guildOnly: true,
     usage: '<@users playing the game>*one or more',
     permissions: '',
-    async execute(client, message, args, commandName, Discord) {
+    async execute(client, message, args, commandName, Discord, config) {
         const gamePlayers = require('./gamePlayers.json');
 
         //targetedMember is type GuildMember
