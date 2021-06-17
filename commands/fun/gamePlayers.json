@@ -16,6 +16,7 @@
                 "minecraftbedrockedition",
                 "jackbox",
                 "krunker",
+                "seaofthieves"
                 "overcooked2"
             ]
         },
@@ -40,7 +41,49 @@
                 "apexlegends",
                 "amongus",
                 "gtaonline",
+                "seaofthieves",
+                "jackbox",
+                "krunker",
+                "minecraftbedrockedition",
+                "astroneer",
+                "battlefrontii",
+                "brawlhalla",
+                "destiny2"
+            ]
+        },
+        {
+            "id": "409183428232347648",
+            "games": [
+                "jackbox",
+                "gtaonline",
+                "apexlegends",
+                "krunker",
+                "minecraftjavaedition",
+                "minecraftbedrockedition",
+                "amongus",
+                "roblox",
+                "destiny2",
+                "battlefrontii",
+                "brawlhalla",
+                "civvi",
                 "seaofthieves"
+            ]
+        },
+        {
+            "id": "449710428243886090",
+            "games": [
+                "minecraftjavaedition",
+                "gtaonline",
+                "destiny2",
+                "battlefrontii",
+                "seaofthieves",
+                "brawlhalla",
+                "roblox",
+                "minecraftbedrockedition",
+                "jackbox",
+                "amongus",
+                "krunker",
+                "astroneer"
             ]
         }
     ]
