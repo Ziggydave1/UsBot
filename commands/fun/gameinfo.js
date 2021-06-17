@@ -8,7 +8,7 @@ module.exports = {
         const gameList = require('./gameList.json');
         const chosenGame = args[0];
 
-        const game = gameList.games.find(entry => entry.id.toLowerCase() === chosenGame.toLowerCase());
+        const game = gameList.games.find(entry => (entry.id.toLowerCase() === chosenGame.toLowerCase()) || (entry.aliases.includes(chosenGame.toLowerCase())));
         if (game) {
             const thumbnailAttachment = new Discord.MessageAttachment(`./assets/thumbnail/${game.id}.jpg`, `${game.id}_thumbnail.jpg`);
             const imageAttachment = new Discord.MessageAttachment(`./assets/image/${game.id}.jpg`, `${game.id}_image.jpg`);

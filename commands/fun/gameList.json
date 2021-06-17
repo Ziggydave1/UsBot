@@ -3,6 +3,13 @@
         {
             "name": "Minecraft: Java Edition",
             "id": "MinecraftJavaEdition",
+            "aliases": [
+                "minecraftjavaedition",
+                "minecraftjava",
+                "java",
+                "javaedition",
+                "mcjava"
+            ],
             "crossplay": true,
             "range": {
                 "min": 2,
@@ -16,6 +23,12 @@
         {
             "name": "GTA Online",
             "id": "GTAOnline",
+            "aliases": [
+                "gtaonline",
+                "gta",
+                "gtav",
+                "gtavonline"
+            ],
             "crossplay": false,
             "range": {
                 "min": 2,
@@ -29,6 +42,11 @@
         {
             "name": "Destiny 2",
             "id": "Destiny2",
+            "aliases": [
+                "destiny2",
+                "d2",
+                "destiny"
+            ],
             "crossplay": false,
             "range": {
                 "min": 3,
@@ -42,6 +60,15 @@
         {
             "name": "Battlefront II",
             "id": "BattlefrontII",
+            "aliases": [
+                "battlefrontii",
+                "battlefront2",
+                "battlefront",
+                "bfii",
+                "bf2",
+                "starwarsbattlefront",
+                "startwardsbattlefrontii"
+            ],
             "crossplay": false,
             "range": {
                 "min": 2,
@@ -55,6 +82,12 @@
         {
             "name": "Sea of Thieves",
             "id": "SeaofThieves",
+            "aliases": [
+                "seaofthieves",
+                "pirates",
+                "sot",
+                "thieves"
+            ],
             "crossplay": true,
             "range": {
                 "min": 3,
@@ -68,6 +101,9 @@
         {
             "name": "Brawlhalla",
             "id": "Brawlhalla",
+            "aliases": [
+                "brawlhalla"
+            ],
             "crossplay": true,
             "range": {
                 "min": 2,
@@ -81,6 +117,9 @@
         {
             "name": "Roblox",
             "id": "Roblox",
+            "aliases": [
+                "roblox"
+            ],
             "crossplay": true,
             "range": {
                 "min": 3,
@@ -94,6 +133,10 @@
         {
             "name": "Paladins",
             "id": "Paladins",
+            "aliases": [
+                "paladins",
+                "paladin"
+            ],
             "crossplay": true,
             "range": {
                 "min": 2,
@@ -107,6 +150,13 @@
         {
             "name": "Minecraft: Bedrock Edition",
             "id": "MinecraftBedrockEdition",
+            "aliases": [
+                "minecraftbedrockedition",
+                "bedrock",
+                "bedrockedition",
+                "minecraftbedrock",
+                "mcbedrock"
+            ],
             "crossplay": true,
             "range": {
                 "min": 2,
@@ -120,6 +170,10 @@
         {
             "name": "Apex Legends",
             "id": "ApexLegends",
+            "aliases": [
+                "apexlegends",
+                "apex"
+            ],
             "crossplay": false,
             "range": {
                 "min": 2,
@@ -133,6 +187,12 @@
         {
             "name": "Jackbox",
             "id": "Jackbox",
+            "aliases": [
+                "jackbox",
+                "partypack",
+                "jackboxpartypack",
+                "jack"
+            ],
             "crossplay": true,
             "range": {
                 "min": 4,
@@ -146,6 +206,10 @@
         {
             "name": "Among Us",
             "id": "AmongUs",
+            "aliases": [
+                "amongus",
+                "amogus"
+            ],
             "crossplay": true,
             "range": {
                 "min": 5,
@@ -159,6 +223,11 @@
         {
             "name": "Krunker",
             "id": "Krunker",
+            "aliases": [
+                "krunker",
+                "krunkerio",
+                "krunker.io"
+            ],
             "crossplay": true,
             "range": {
                 "min": 4,
@@ -172,6 +241,9 @@
         {
             "name": "Astroneer",
             "id": "Astroneer",
+            "aliases": [
+                "astroneer"
+            ],
             "crossplay": true,
             "range": {
                 "min": 2,
@@ -185,6 +257,13 @@
         {
             "name": "Sid Meier’s Civilization VI",
             "id": "CivVI",
+            "aliases": [
+                "civvi",
+                "civ6",
+                "civilization",
+                "civilizationvi",
+                "civilization6"
+            ],
             "crossplay": false,
             "range": {
                 "min": 2,
@@ -198,6 +277,12 @@
         {
             "name": "Cities: Skylines",
             "id": "CitiesSkylines",
+            "aliases": [
+                "citiesskylines",
+                "cities:skylines",
+                "cities",
+                "skylines"
+            ],
             "crossplay": false,
             "range": {
                 "min": 2,

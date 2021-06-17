@@ -28,12 +28,15 @@ module.exports = {
             })
         }
         const gameList = require('./gameList.json');
+        //I want to initialize this separately in each case but Node.js doesn't like that
+        let game = ""
+        
         switch (args[0]) {
             case ('view'):
                 //This displays user profile info
                 let gamesList = '';
                 player.games.forEach(async gameName => {
-                    const game = gameList.games.find(entry => entry.id.toLowerCase() === gameName.toLowerCase());
+                    game = gameList.games.find(entry => entry.id.toLowerCase() === gameName.toLowerCase());
                     let emoji = message.guild.emojis.cache.find(e => e.name === game.id);
                     if (!emoji) {
                         await message.guild.emojis.create(`./assets/emoji/${game.id}.png`, game.id);
@@ -55,17 +58,18 @@ module.exports = {
                     break;
                 }
 
-                const game = gameList.games.find(entry => entry.id.toLowerCase() === args[1].toLowerCase());
+                game = gameList.games.find(entry => (entry.id.toLowerCase() === args[1].toLowerCase()) || (entry.aliases.includes(args[1].toLowerCase())));
+
                 if (!game) {
                     message.channel.send('Game not found');
                     break;
                 }
 
-                if (player.games.includes(args[1].toLowerCase())) {
+                if (player.games.includes(game.id.toLowerCase())) {
                     message.channel.send('Game already added');
                     break;
                 }
-                player.games.push(args[1].toLowerCase());
+                player.games.push(game.id.toLowerCase());
                 jsonString = JSON.stringify(gamePlayers, null, 4);
                 fs.writeFile('./commands/fun/gamePlayers.json', jsonString, err => {
                     if (err) {
@@ -83,11 +87,13 @@ module.exports = {
                     break;
                 }
 
-                if (!player.games.includes(args[1].toLowerCase())) {
+                game = gameList.games.find(entry => (entry.id.toLowerCase() === args[1].toLowerCase()) || (entry.aliases.includes(args[1].toLowerCase())));
+
+                if (!player.games.includes(game.id.toLowerCase())) {
                     message.channel.send('Game not owned');
                     break;
                 }
-                player.games.splice(player.games.indexOf(args[1].toLowerCase()), 1);
+                player.games.splice(player.games.indexOf(game.id.toLowerCase()), 1);
                 jsonString = JSON.stringify(gamePlayers, null, 4);
                 fs.writeFile('./commands/fun/gamePlayers.json', jsonString, err => {
                     if (err) {
