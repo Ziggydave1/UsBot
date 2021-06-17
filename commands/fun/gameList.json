@@ -230,7 +230,7 @@
             ],
             "crossplay": true,
             "range": {
-                "min": 4,
+                "min": 3,
                 "max": 8
             },
             "description": "An easy to get into fully moddable first person shooter with advanced movement mechanics. Fully customizable with mods, custom maps and thousands of items to unlock.",
