@@ -5,6 +5,9 @@ module.exports = {
     guildOnly: false,
     permissions: '',
     execute(client, message, args, commandName, Discord) {
-        message.channel.send('pong!');
+        const newEmbed = new Discord.MessageEmbed()
+        .setColor('#ffffff')
+        .setAuthor('pong!')
+        message.channel.send(newEmbed);
     }
 }
