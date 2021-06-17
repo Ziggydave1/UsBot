@@ -2,7 +2,14 @@
     "games": [
         {
             "name": "Minecraft: Java Edition",
-            "emoji": "MinecraftJavaEdition",
+            "id": "MinecraftJavaEdition",
+            "aliases": [
+                "minecraftjavaedition",
+                "minecraftjava",
+                "java",
+                "javaedition",
+                "mcjava"
+            ],
             "crossplay": true,
             "range": {
                 "min": 2,
@@ -15,7 +22,13 @@
         },
         {
             "name": "GTA Online",
-            "emoji": "GTAOnline",
+            "id": "GTAOnline",
+            "aliases": [
+                "gtaonline",
+                "gta",
+                "gtav",
+                "gtavonline"
+            ],
             "crossplay": false,
             "range": {
                 "min": 2,
@@ -28,7 +41,12 @@
         },
         {
             "name": "Destiny 2",
-            "emoji": "Destiny2",
+            "id": "Destiny2",
+            "aliases": [
+                "destiny2",
+                "d2",
+                "destiny"
+            ],
             "crossplay": false,
             "range": {
                 "min": 3,
@@ -41,10 +59,19 @@
         },
         {
             "name": "Battlefront II",
-            "emoji": "BattlefrontII",
+            "id": "BattlefrontII",
+            "aliases": [
+                "battlefrontii",
+                "battlefront2",
+                "battlefront",
+                "bfii",
+                "bf2",
+                "starwarsbattlefront",
+                "startwardsbattlefrontii"
+            ],
             "crossplay": false,
             "range": {
-                "min": 3,
+                "min": 2,
                 "max": 5
             },
             "description": "Embark on an all-new Battlefront experience from the bestselling STAR WARS™ HD game franchise of all time. Become the hero and play as a fearless trooper, pilot a legendary starfighter, fight as your favorite iconic STAR WARS character, or forge a new path as an elite special forces soldier through an emotionally gripping new STAR WARS story.",
@@ -54,7 +81,13 @@
         },
         {
             "name": "Sea of Thieves",
-            "emoji": "SeaofThieves",
+            "id": "SeaofThieves",
+            "aliases": [
+                "seaofthieves",
+                "pirates",
+                "sot",
+                "thieves"
+            ],
             "crossplay": true,
             "range": {
                 "min": 3,
@@ -67,7 +100,10 @@
         },
         {
             "name": "Brawlhalla",
-            "emoji": "Brawlhalla",
+            "id": "Brawlhalla",
+            "aliases": [
+                "brawlhalla"
+            ],
             "crossplay": true,
             "range": {
                 "min": 2,
@@ -80,7 +116,10 @@
         },
         {
             "name": "Roblox",
-            "emoji": "Roblox",
+            "id": "Roblox",
+            "aliases": [
+                "roblox"
+            ],
             "crossplay": true,
             "range": {
                 "min": 3,
@@ -93,7 +132,11 @@
         },
         {
             "name": "Paladins",
-            "emoji": "Paladins",
+            "id": "Paladins",
+            "aliases": [
+                "paladins",
+                "paladin"
+            ],
             "crossplay": true,
             "range": {
                 "min": 2,
@@ -106,7 +149,14 @@
         },
         {
             "name": "Minecraft: Bedrock Edition",
-            "emoji": "MinecraftBedrockEdition",
+            "id": "MinecraftBedrockEdition",
+            "aliases": [
+                "minecraftbedrockedition",
+                "bedrock",
+                "bedrockedition",
+                "minecraftbedrock",
+                "mcbedrock"
+            ],
             "crossplay": true,
             "range": {
                 "min": 2,
@@ -119,20 +169,30 @@
         },
         {
             "name": "Apex Legends",
-            "emoji": "ApexLegends",
+            "id": "ApexLegends",
+            "aliases": [
+                "apexlegends",
+                "apex"
+            ],
             "crossplay": false,
             "range": {
                 "min": 2,
                 "max": 3
             },
-            "description": "Conquer with character in Apex Legends, a free-to-play* Battle Royale shooter where legendary characters with powerful abilities team up to battle for fame and fortune on the fringes of the Frontier. Master an ever-growing roster of diverse Legends, deep tactical squad play, and bold new innovations in the next evolution of Battle Royale.",
+            "description": "Conquer with character in Apex Legends, a Battle Royale shooter where legendary characters with powerful abilities team up to battle for fame and fortune on the fringes of the Frontier. Master an ever-growing roster of diverse Legends, deep tactical squad play, and bold new innovations in the next evolution of Battle Royale.",
             "color": "#AB3937",
             "logoLink": "https://store-images.s-microsoft.com/image/apps.43136.71371076658790719.e99f8f53-72eb-4a77-bf15-167d722fc4b0.ca5d3db2-eff3-4adb-a177-21e6b9a9f473?mode=scale&q=90&h=300&w=200",
             "imageLink": "https://static0.srcdn.com/wordpress/wp-content/uploads/2020/02/Apex-Legends-Character-Guide.jpg"
         },
         {
             "name": "Jackbox",
-            "emoji": "Jackbox",
+            "id": "Jackbox",
+            "aliases": [
+                "jackbox",
+                "partypack",
+                "jackboxpartypack",
+                "jack"
+            ],
             "crossplay": true,
             "range": {
                 "min": 4,
@@ -145,7 +205,11 @@
         },
         {
             "name": "Among Us",
-            "emoji": "AmongUs",
+            "id": "AmongUs",
+            "aliases": [
+                "amongus",
+                "amogus"
+            ],
             "crossplay": true,
             "range": {
                 "min": 5,
@@ -158,7 +222,12 @@
         },
         {
             "name": "Krunker",
-            "emoji": "Krunker",
+            "id": "Krunker",
+            "aliases": [
+                "krunker",
+                "krunkerio",
+                "krunker.io"
+            ],
             "crossplay": true,
             "range": {
                 "min": 4,
@@ -168,6 +237,61 @@
             "color": "#FAB52F",
             "logoLink": "https://kenovis.es/wp-content/uploads/2020/05/krunker-logo-1024x576.png",
             "imageLink": "https://i.ytimg.com/vi/Kczemz24ssE/maxresdefault.jpg"
+        },
+        {
+            "name": "Astroneer",
+            "id": "Astroneer",
+            "aliases": [
+                "astroneer"
+            ],
+            "crossplay": true,
+            "range": {
+                "min": 2,
+                "max": 4
+            },
+            "description": "Explore and reshape distant worlds! Astroneer is set during the 25th century Intergalactic Age of Discovery, where Astroneers explore the frontiers of outer space, risking their lives in harsh environments to unearth rare discoveries and unlock the mysteries of the universe.",
+            "color": "#4DC9CA",
+            "logoLink": "https://store-images.s-microsoft.com/image/apps.17703.13510798887933723.57e43f19-4066-429e-b1a2-caea56e427b4.f555e1de-d116-4ab1-bed1-408a78622ba6?mode=scale&q=90&h=300&w=200",
+            "imageLink": "https://th.bing.com/th/id/R0f4ea8a5ffb387b6cba1837926a2aa95?rik=qVyrQpgoanN8qg&pid=ImgRaw"
+        },
+        {
+            "name": "Sid Meier’s Civilization VI",
+            "id": "CivVI",
+            "aliases": [
+                "civvi",
+                "civ6",
+                "civilization",
+                "civilizationvi",
+                "civilization6"
+            ],
+            "crossplay": false,
+            "range": {
+                "min": 2,
+                "max": 8
+            },
+            "description": "Originally created by legendary game designer Sid Meier, Civilization is a turn-based strategy game in which you attempt to build an empire to stand the test of time. Become Ruler of the World by establishing and leading a civilization from the Stone Age to the Information Age. Wage war, conduct diplomacy, advance your culture, and go head-to-head with history’s greatest leaders as you attempt to build the greatest civilization the world has ever known.",
+            "color": "#DCBB89",
+            "logoLink": "https://store-images.s-microsoft.com/image/apps.16669.13977311502771693.72aef738-75a3-4db8-97c9-280f3b8c4daa.c2290e57-1525-4b4a-94d7-d652b1ff3520?mode=scale&q=90&h=300&w=200",
+            "imageLink": "https://th.bing.com/th/id/Rca7da268ed74626ca0d6dc5bd5126d94?rik=CuLH1fPGDM%2faFg&riu=http%3a%2f%2fgameplay.tips%2fuploads%2fposts%2f2016-10%2f1477512385_civilization-vi.jpg&ehk=pfCg8r45xwnKMKs1IhYWj5mYj2FQ7S9KqaZ0wb3kAX0%3d&risl=&pid=ImgRaw"
+        },
+        {
+            "name": "Cities: Skylines",
+            "id": "CitiesSkylines",
+            "aliases": [
+                "citiesskylines",
+                "cities:skylines",
+                "cities",
+                "skylines"
+            ],
+            "crossplay": false,
+            "range": {
+                "min": 2,
+                "max": 2
+            },
+            "description": "Cities: Skylines is a modern take on the classic city simulation. The game introduces new game play elements to realize the thrill and hardships of creating and maintaining a real city whilst expanding on some well-established tropes of the city building experience.",
+            "color": "#65CCEF",
+            "logoLink": "https://cdn-products.eneba.com/resized-products/fd789e2ed96b5fac6cce90bef9148ae2_350x200_1x-0.jpg",
+            "imageLink": "https://xblafans.com/wp-content/uploads/2017/02/cities-skylines-13-700x393.png"
         }
     ]
 }

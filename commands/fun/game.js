@@ -1,59 +1,66 @@
 module.exports = {
     name: 'game',
-    description: 'get a game suitable for a given group of members',
+    description: 'get a list of games suitable for a given group of members',
     args: true,
     guildOnly: true,
     usage: '<@users playing the game>*one or more',
     permissions: '',
-    execute(client, message, args) {
-        const config = require('./gameConfig.json');
-        const targets = message.mentions.members;
-        const peopleNum = targets.size;
+    async execute(client, message, args, commandName, Discord) {
+        const gameList = require('./gameList.json');
 
+        //mentionedPlayers is of type Collection<Snowflake, GuildMember>
+        const mentionedPlayers = message.mentions.members;
+        const playerCount = mentionedPlayers.size;
+        
         let reply = '**The games you can play are:**\n-------------------------------------------';
         let xboxNeeded = false;
         let pcNeeded = false;
-        if (peopleNum == 1) {
+        if (playerCount === 1) {
             return message.channel.send('You are sad and lonely.');
         }
-        for (const target of targets) {
-            const guildMember = target[1];
-            const roles = guildMember._roles;
-            if (roles.includes('829524476998713376') && !roles.includes('829524517016567858')) {
+        //mentionedPlayer is of type GuildMember
+        for (const mentionedPlayer of mentionedPlayers.values()) {
+            const roles = mentionedPlayer.roles.cache;
+            if (roles.find(role => role.name === "Xbox") && !roles.find(role => role.name === "PC")) {
                 xboxNeeded = true;
             }
-            if (roles.includes('829524517016567858') && !roles.includes('829524476998713376')) {
+            if (roles.find(role => role.name === "PC") && !roles.find(role => role.name === "Xbox")) {
                 pcNeeded = true;
             }
         }
-        switch (true) {
-            case (xboxNeeded && pcNeeded):
-                for (const game of config.games) {
-                    if (game.crossplay) {
-                        if (game.range.min <= peopleNum && peopleNum <= game.range.max) {
-                            if (game.emoji) {
-                                const emoji = message.guild.emojis.cache.find(r => r.name == game.emoji);
-                                reply += `\n${emoji} *\`${game.name}\`*`;
-                            } else {
-                                reply += `\n:question: *\`${game.name}\`*`;
-                            }
+
+        const gamePlayers = require('./gamePlayers.json');
+        
+        for (const game of gameList.games) {
+            addToReply = true;
+            //mentionedPlayer is of type [Snowflake, GuildMember]
+            for (const mentionedPlayer of mentionedPlayers) {
+                const gamePlayer = gamePlayers.players.find(p => p.id === mentionedPlayer[0]);
+                if (!gamePlayer) {
+                    return message.channel.send(`\`${mentionedPlayer[1].user.username}\` is not a gamer. Use \`-mygames view\` to become a gamer.`);
+                }
+                if (gamePlayer.games.length === 0) {
+                    return message.channel.send(`\`${mentionedPlayer[1].user.username}\` has no games`);
+                }
+                if (gamePlayer.games.indexOf(game.id.toLowerCase()) === -1) {
+                    addToReply = false;
+                }
+            }
+            if (addToReply) {
+                //If crossplay is supported, it's always playable. If crossplay isn't required, every game is playable.
+                if (game.crossplay || !(xboxNeeded && pcNeeded)) {
+                    if (game.range.min <= playerCount && playerCount <= game.range.max) {
+                        let emoji = message.guild.emojis.cache.find(e => e.name === game.id);
+                        if (!emoji) {
+                            await message.guild.emojis.create(`./assets/emoji/${game.id}.png`, game.id);
+                            emoji = message.guild.emojis.cache.find(e => e.name === game.id);
                         }
+                        reply += `\n${emoji} *\`${game.name}\`*`;
                     }
                 }
-                break;
-            case (!xboxNeeded || !pcNeeded):
-                for (const game of config.games) {
-                    if (game.range.min <= peopleNum && peopleNum <= game.range.max) {
-                        if (game.emoji) {
-                            const emoji = message.guild.emojis.cache.find(r => r.name == game.emoji);
-                            reply += `\n${emoji} *\`${game.name}\`*`;
-                        } else {
-                            reply += `\n:question: *\`${game.name}\`*`;
-                        }
-                    }
-                }
-                break;
+            }
         }
+    
         message.channel.send(reply);
     }
 }

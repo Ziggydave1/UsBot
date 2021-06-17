@@ -34,6 +34,15 @@
         "play": {
             "enabled": true
         },
+        "mygames": {
+            "enabled": true
+        },
+        "lfg": {
+            "enabled": true
+        },
+        "mcserver": {
+            "enabled": true
+        },
         "connect4": {
             "enabled": true
         }

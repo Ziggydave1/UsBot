@@ -1,0 +1,19 @@
+{
+    "servers": [
+        {
+            "number": "1",
+            "modded": true,
+            "max_players": 20,
+            "mods": [
+                "terra"
+            ],
+            "version": "1.16.5",
+            "status": "off",
+            "ip": "0.0.0.0:0000",
+            "difficulty": "normal",
+            "gamemode": "survival",
+            "command_blocks": false,
+            "note": "This is subject to change, this is just what i though of right off the bat."
+        }
+    ]
+}

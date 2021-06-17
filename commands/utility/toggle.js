@@ -6,7 +6,7 @@ module.exports = {
     guildOnly: false,
     usage: '<command to be toggled>',
     permissions: 'MANAGE_GUILD',
-    execute(client, message, args) {
+    execute(client, message, args, commandName, Discord) {
         let state = 'on';
         fs.readFile('./config.json', 'utf8', (err, configuration) => {
             if (err) {

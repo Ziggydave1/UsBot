@@ -1,0 +1,46 @@
+{
+    "players": [
+        {
+            "id": "511266530634498068",
+            "games": [
+                "paladins",
+                "amongus",
+                "destiny2",
+                "apexlegends",
+                "brawlhalla",
+                "roblox",
+                "civvi",
+                "minecraftjavaedition",
+                "citiesskylines",
+                "battlefrontii",
+                "minecraftbedrockedition",
+                "jackbox",
+                "krunker"
+            ]
+        },
+        {
+            "id": "629810130128601089",
+            "games": [
+                "amongus",
+                "minecraftjavaedition",
+                "battlefrontii",
+                "civvi"
+            ]
+        },
+        {
+            "id": "492452900744855563",
+            "games": []
+        },
+        {
+            "id": "617139301783699456",
+            "games": [
+                "minecraftjavaedition",
+                "roblox",
+                "apexlegends",
+                "amongus",
+                "gtaonline",
+                "seaofthieves"
+            ]
+        }
+    ]
+}
