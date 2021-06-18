@@ -347,6 +347,20 @@
             },
             "description": "Rocket League is a high-powered hybrid of arcade-style soccer and vehicular mayhem with easy-to-understand controls and fluid, physics-driven competition. Rocket League includes casual and competitive Online Matches, a fully-featured offline Season Mode, special “Mutators” that let you change the rules entirely, hockey and basketball-inspired Extra Modes, and more than 500 trillion possible cosmetic customization combinations.",
             "color": "#1E7AC7"
+        },
+        {
+            "name": "Core",
+            "id": "Core",
+            "aliases": [
+                "core"
+            ],
+            "crossplay": false,
+            "range": {
+                "min": 2,
+                "max": 6
+            },
+            "description": "Core is an endless arcade of thousands of free games to play and worlds to explore designed by a global community of developers. Play thousands of Unreal-powered games in every genre imaginable, or create, share, and earn from your own!",
+            "color": "#FFB116"
         }
     ]
 }
