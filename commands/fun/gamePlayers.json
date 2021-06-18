@@ -11,13 +11,12 @@
                 "roblox",
                 "civvi",
                 "minecraftjavaedition",
-                "citiesskylines",
-                "battlefrontii",
                 "minecraftbedrockedition",
                 "jackbox",
                 "krunker",
                 "seaofthieves",
-                "overcooked2"
+                "overcooked2",
+                "terraria"
             ]
         },
         {
@@ -26,7 +25,13 @@
                 "amongus",
                 "minecraftjavaedition",
                 "battlefrontii",
-                "civvi"
+                "civvi",
+                "overcooked2",
+                "minecraftbedrockedition",
+                "jackbox",
+                "krunker",
+                "seaofthieves",
+                "citiesskylines"
             ]
         },
         {
@@ -38,17 +43,15 @@
             "games": [
                 "minecraftjavaedition",
                 "roblox",
-                "apexlegends",
                 "amongus",
                 "gtaonline",
                 "seaofthieves",
                 "jackbox",
                 "krunker",
                 "minecraftbedrockedition",
-                "astroneer",
-                "battlefrontii",
                 "brawlhalla",
-                "destiny2"
+                "overcooked2",
+                "reddeadonline"
             ]
         },
         {
