@@ -309,6 +309,27 @@
             },
             "description": "The world is at your fingertips as you fight for survival, fortune, and glory. Delve deep into cavernous expanses, test your mettle in combat, or construct your own city - the choice is yours! Now with more content than ever before. Blending elements of classic action games with sandbox-style creativity, the Terraria adventure is truly as unique as the players themselves!",
             "color": "#1BE26D"
+        },
+        {
+            "name": "Red Dead Online",
+            "id": "RedDeadOnline",
+            "aliases": [
+                "reddeadonline",
+                "reddead",
+                "red dead",
+                "rdr2",
+                "reddeadredemption",
+                "reddeadredemption2",
+                "red dead online",
+                "red dead 2"
+            ],
+            "crossplay": false,
+            "range": {
+                "min": 2,
+                "max": 6
+            },
+            "description": "Step into the vibrant, ever-evolving world of Red Dead Online and experience life in frontier America. Chase down bounties, battle outlaw gangs and other players, hunt, fish and trade, search for exotic treasures, run Moonshine, and much more to discover in a world of astounding depth and detail.",
+            "color": "#A60204"
         }
     ]
 }
