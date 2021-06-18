@@ -60,7 +60,7 @@ module.exports = {
                     .setColor('#FFFFFF')
                     .setTitle(targetedMember.user.username)
                     .setThumbnail(targetedMember.user.displayAvatarURL())
-                    .addField('Games owned', playerGames ? playerGames : 'None')
+                    .addField('Games', playerGames ? playerGames : 'None')
                 message.channel.send(newEmbed);
                 break;
             case ('add'):
