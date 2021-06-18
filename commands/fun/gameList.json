@@ -330,6 +330,23 @@
             },
             "description": "Step into the vibrant, ever-evolving world of Red Dead Online and experience life in frontier America. Chase down bounties, battle outlaw gangs and other players, hunt, fish and trade, search for exotic treasures, run Moonshine, and much more to discover in a world of astounding depth and detail.",
             "color": "#A60204"
+        },
+        {
+            "name": "Rocket League",
+            "id": "RocketLeague",
+            "aliases": [
+                "rocketleague",
+                "rocket league",
+                "rl",
+                "rocket"
+            ],
+            "crossplay": true,
+            "range": {
+                "min": 2,
+                "max": 4
+            },
+            "description": "Rocket League is a high-powered hybrid of arcade-style soccer and vehicular mayhem with easy-to-understand controls and fluid, physics-driven competition. Rocket League includes casual and competitive Online Matches, a fully-featured offline Season Mode, special “Mutators” that let you change the rules entirely, hockey and basketball-inspired Extra Modes, and more than 500 trillion possible cosmetic customization combinations.",
+            "color": "#1E7AC7"
         }
     ]
 }
