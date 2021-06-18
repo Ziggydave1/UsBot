@@ -361,6 +361,20 @@
             },
             "description": "Core is an endless arcade of thousands of free games to play and worlds to explore designed by a global community of developers. Play thousands of Unreal-powered games in every genre imaginable, or create, share, and earn from your own!",
             "color": "#FFB116"
+        },
+        {
+            "name": "Warframe",
+            "id": "Warframe",
+            "aliases": [
+                "warframe"
+            ],
+            "crossplay": false,
+            "range": {
+                "min": 2,
+                "max": 4
+            },
+            "description": "Join the Tenno and defend an ever-expanding universe. Wield your Warframe's tactical abilities, craft a loadout of devastating weaponry and define your playstyle to become an unstoppable force in this genre-defining looter-shooter.",
+            "color": "#F9F9F9"
         }
     ]
 }
