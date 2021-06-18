@@ -277,6 +277,38 @@
             },
             "description": "Overcooked returns with a brand-new helping of chaotic cooking action! Journey back to the Onion Kingdom and assemble your team of chefs in classic couch co-op or online play for up to four players. Hold onto your aprons … it’s time to save the world (again!)",
             "color": "#FEBA1F"
+        },
+        {
+            "name": "ARK: Survival Evolved",
+            "id": "ArkSurvivalEvolved",
+            "aliases": [
+                "arksurvivalevolved",
+                "ark",
+                "arksurvival",
+                "ark:survivalevolved"
+            ],
+            "crossplay": false,
+            "range": {
+                "min": 2,
+                "max": 10
+            },
+            "description": "Stranded naked, freezing & starving on a mysterious island, you must hunt, harvest, craft items, grow crops, & build shelters to survive. Use skill & cunning to kill, tame, breed, & ride the Dinosaurs & primeval creatures living on ARK. Team up with hundreds of players online or try to survive on your own in offline play.",
+            "color": "#E1C7A4"
+        },
+        {
+            "name": "Terraria",
+            "id": "Terraria",
+            "aliases": [
+                "terraria",
+                "teraria"
+            ],
+            "crossplay": false,
+            "range": {
+                "min": 2,
+                "max": 6
+            },
+            "description": "The world is at your fingertips as you fight for survival, fortune, and glory. Delve deep into cavernous expanses, test your mettle in combat, or construct your own city - the choice is yours! Now with more content than ever before. Blending elements of classic action games with sandbox-style creativity, the Terraria adventure is truly as unique as the players themselves!",
+            "color": "#1BE26D"
         }
     ]
 }
