@@ -1,0 +1,56 @@
+module.exports = {
+    name: 'ping',
+    description: 'pings the UsBot',
+    args: false,
+    guildOnly: false,
+    permissions: '',
+    execute(client, message, args, commandName, Discord) {
+        const stringSimilarity = require('string-similarity');
+        const newEmbed = new Discord.MessageEmbed()
+        .setColor('#ffffff')
+        .setAuthor('pong!')
+        message.channel.send(newEmbed);
+        let testInputs = [
+            ['minecraftjavaedition', 'minecraftjavaedition', 'minecraftjava', 'java', 'javaedition', 'mcjava'],
+            ['gtaonline', 'gtaonline', 'gta', 'gtav', 'gtavonline'],
+            ['destiny2', 'destiny2', 'd2', 'destiny'],
+            ['battlefront2', 'battlefrontii', 'battlefront2', 'battlefront', 'bfii', 'bf2', 'starwarsbattlefront', 'startwardsbattlefrontii'],
+            ['seaofthieves', 'seaofthieves', 'pirates', 'sot', 'thieves'],
+            ['brawlhalla', 'brawlhalla'],
+            ['roblox', 'roblox'],
+            ['paladins', 'paladins', 'paladin'],
+            ['minecraftbedrockedition', 'minecraftbedrockedition', 'bedrock', 'bedrockedition', 'minecraftbedrock', 'mcbedrock'],
+            ['apexlegends', 'apexlegends', 'apex'],
+            ['jackbox', 'jackbox', 'partypack', 'jackboxpartypack', 'jack'],
+            ['amongus', 'amongus', 'amogus'],
+            ['krunker', 'krunker', 'krunkerio', 'krunker.io'],
+            ['astroneer', 'astroneer'],
+            ['civilization6', 'civvi', 'civ6', 'civilization', 'civilizationvi', 'civilization6'],
+            ['citiesskylines', 'citiesskylines', 'cities:skylines', 'cities', 'skylines'],
+            ['overcooked2', 'overcooked2', 'overcooked 2', 'overcooked', 'overcooked! 2'],
+            ['arksurvivalevolved', 'arksurvivalevolved', 'ark', 'arksurvival', 'ark:survivalevolved'],
+            ['terraria', 'terraria', 'teraria'],
+            ['reddeadredemption', 'reddeadonline', 'reddead', 'red dead', 'rdr2', 'reddeadredemption', 'reddeadredemption2', 'red dead online', 'red dead 2'],
+            ['rocketleague', 'rocketleague', 'rocket league', 'rl', 'rocket']
+        ]
+        let expectedList = []
+        for (inputSet in testInputs) {
+            expectedList.push(testInputs[inputSet][0])
+        }
+        console.log(expectedList);
+        for (const inputSet of testInputs) {
+            target = inputSet[0];
+            for (const [index, item] of inputSet.entries()) {
+                if (!(index === 0)) {
+                    let matches = stringSimilarity.findBestMatch(item, expectedList);
+                    let match = matches.bestMatch.target;
+                    if (match == target) {
+                        console.log(`Passed > ${item}`)
+                    } else {
+                        console.log(`Failed > ${item}`)
+                    }
+                }
+            }
+        }
+    }
+}
