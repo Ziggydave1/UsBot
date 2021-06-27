@@ -5,15 +5,15 @@ const allGameNames = gameList.games.map(entry => entry.aliases[0]);
 module.exports = {
     //Returns a game object from a name
     findGame(gameName) {
-        let game = gameList.games.find(entry => entry.aliases.includes(args[1].toLowerCase()));
+        let game = gameList.games.find(entry => entry.aliases.includes(gameName));
         if (!game) {
             gameName = findClosestName(gameName);
-            game = gameList.games.find(entry => entry.aliases.includes(args[1].toLowerCase()));
+            game = gameList.games.find(entry => entry.aliases.includes(gameName));
         }
         return game;
     },
     //Returns an emoji from a game object
-    getEmoji(game, message) {
+    async getEmojiAsync(game, message) {
         let emoji = message.guild.emojis.cache.find(e => e.name === game.id);
         if (!emoji) {
             await message.guild.emojis.create(`./assets/emoji/${game.id}.png`, game.id);
