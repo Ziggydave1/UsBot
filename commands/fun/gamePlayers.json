@@ -19,7 +19,8 @@
                 "terraria",
                 "rocketleague",
                 "core",
-                "warframe"
+                "warframe",
+                "battlefrontii"
             ]
         },
         {
@@ -54,7 +55,8 @@
                 "minecraftbedrockedition",
                 "brawlhalla",
                 "overcooked2",
-                "reddeadonline"
+                "reddeadonline",
+                "apexlegends"
             ]
         },
         {
@@ -90,6 +92,23 @@
                 "amongus",
                 "krunker",
                 "astroneer"
+            ]
+        },
+        {
+            "id": "494665736724283393",
+            "games": [
+                "minecraftjavaedition",
+                "minecraftbedrockedition",
+                "reddeadonline",
+                "gtaonline",
+                "destiny2",
+                "jackbox",
+                "krunker",
+                "terraria",
+                "seaofthieves",
+                "battlefrontii",
+                "amongus",
+                "warframe"
             ]
         }
     ]
