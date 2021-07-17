@@ -51,7 +51,7 @@ module.exports = {
             let gamesMessage = '';
             for (const game of gameList.games) {
                 const emoji = await gameHelper.getEmojiAsync(game, message);
-                gamesMessage += `\n${emoji} *\`${game.name}\`*`;
+                gamesMessage += `\n${emoji} ${game.name}`;
             }
             const gamesEmbed = new Discord.MessageEmbed()
                 .setColor('#C792EA')
