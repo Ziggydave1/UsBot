@@ -1,3 +1,6 @@
+const gamePlayers = require('./gamePlayers.json');
+const gameList = require('./gameList.json');
+const gameHelper = require('../../helpers/gameHelper.js')
 module.exports = {
     name: 'game',
     description: 'get a list of games suitable for a given group of members',
@@ -6,13 +9,11 @@ module.exports = {
     usage: '<@users playing the game>*one or more',
     permissions: '',
     async execute(client, message, args, commandName, Discord) {
-        const gameList = require('./gameList.json');
-
         //mentionedPlayers is of type Collection<Snowflake, GuildMember>
         const mentionedPlayers = message.mentions.members;
         const playerCount = mentionedPlayers.size;
         
-        let reply = '**The games you can play are:**\n-------------------------------------------';
+        let reply = '';
         let xboxNeeded = false;
         let pcNeeded = false;
         if (playerCount === 1) {
@@ -29,7 +30,6 @@ module.exports = {
             }
         }
 
-        const gamePlayers = require('./gamePlayers.json');
         
         for (const game of gameList.games) {
             addToReply = true;
@@ -50,17 +50,28 @@ module.exports = {
                 //If crossplay is supported, it's always playable. If crossplay isn't required, every game is playable.
                 if (game.crossplay || !(xboxNeeded && pcNeeded)) {
                     if (game.range.min <= playerCount && playerCount <= game.range.max) {
-                        let emoji = message.guild.emojis.cache.find(e => e.name === game.id);
-                        if (!emoji) {
-                            await message.guild.emojis.create(`./assets/emoji/${game.id}.png`, game.id);
-                            emoji = message.guild.emojis.cache.find(e => e.name === game.id);
-                        }
-                        reply += `\n${emoji} *\`${game.name}\`*`;
+                        const emoji = await gameHelper.getEmojiAsync(game, message);
+                        reply += `\n${emoji} ${game.name}`;
                     }
                 }
             }
         }
+
+        let playerList = '';
+        for (const player of mentionedPlayers.values()) {
+            playerList += player.user.username + ', ';
+        }
+
+        //This is kinda janky but oh well
+        playerList = playerList.substring(0, playerList.length - 2)
     
-        message.channel.send(reply);
+        const gamesEmbed = new Discord.MessageEmbed()
+            .setColor('#FFB116')
+            .setAuthor(message.author.username, message.author.displayAvatarURL())
+            .setTitle('Possible games')
+            .setDescription(reply)
+            .setFooter('UsBot', client.user.displayAvatarURL())
+            .addField('Players', playerList)
+        message.channel.send(gamesEmbed);
     }
 }

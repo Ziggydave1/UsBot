@@ -1,4 +1,5 @@
 const gamePlayers = require('./gamePlayers.json');
+const gameHelper = require('../../helpers/gameHelper');
 module.exports = {
     name: 'lfg',
     description: 'finds other players for a given game',
@@ -6,12 +7,14 @@ module.exports = {
     guildOnly: true,
     permissions: false,
     async execute(client, message, args, commandName, Discord) {
-        const chosenGame = args[0];
+        if (!args[0]) {
+            return;
+        }
+
         const gameList = require('./gameList.json');
-        const game = gameList.games.find(entry => (entry.id.toLowerCase() === chosenGame.toLowerCase()) || (entry.aliases.includes(chosenGame.toLowerCase())));
+        const game = gameHelper.findGame(args[0]);
 
-
-        let reply = 'Possible players: \n'
+        let reply = '';
         
         const members = await message.guild.members.fetch();
 
@@ -24,10 +27,18 @@ module.exports = {
             }
         }
 
-        if (reply === 'Possible players: \n') {
+        if (reply === '') {
             reply += 'No players found';
         }
 
-        message.channel.send(reply);
+        const gameEmoji = await gameHelper.getEmojiAsync(game, message);
+
+        const playersEmbed = new Discord.MessageEmbed()
+            .setColor(game.color)
+            .setAuthor(message.author.username, message.author.displayAvatarURL())
+            .setTitle(`${gameEmoji} ${game.name}`)
+            .addField('Possible players:', reply)
+            .setFooter('UsBot', client.user.displayAvatarURL())
+        message.channel.send(playersEmbed);
     }
 }
