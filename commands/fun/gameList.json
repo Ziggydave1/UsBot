@@ -43,9 +43,9 @@
                 "d2",
                 "destiny"
             ],
-            "crossplay": false,
+            "crossplay": true,
             "range": {
-                "min": 3,
+                "min": 2,
                 "max": 6
             },
             "description": "Dive into the free-to-play world of Destiny 2 to experience responsive FPS combat, explore the mysteries of our solar system, customize your guardian with unique gear, and unleash elemental abilities against powerful enemies.",
@@ -156,7 +156,7 @@
                 "apexlegends",
                 "apex"
             ],
-            "crossplay": false,
+            "crossplay": true,
             "range": {
                 "min": 2,
                 "max": 3
