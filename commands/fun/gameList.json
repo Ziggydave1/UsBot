@@ -375,6 +375,35 @@
             },
             "description": "Join the Tenno and defend an ever-expanding universe. Wield your Warframe's tactical abilities, craft a loadout of devastating weaponry and define your playstyle to become an unstoppable force in this genre-defining looter-shooter.",
             "color": "#F9F9F9"
+        },
+        {
+            "name": "Halo Infinite",
+            "id": "HaloInfinite",
+            "aliases": [
+                "haloinfinite",
+                "halo"
+            ],
+            "crossplay": true,
+            "range": {
+                "min": 2,
+                "max": 10
+            },
+            "description": "The legendary Halo series returns with the most expansive Master Chief campaign yet and a ground-breaking free to play multiplayer experience.",
+            "color": "#76ABD4"
+        },
+        {
+            "name": "Splitgate",
+            "id": "Splitgate",
+            "aliases": [
+                "splitgate"
+            ],
+            "crossplay": true,
+            "range": {
+                "min": 2,
+                "max": 4
+            },
+            "description": "Splitgate is a free-to-play, fast-paced multiplayer shooter that features player-controlled portals. This sci-fi shooter takes the FPS genre to a new dimension with its portal mechanics, delivering high-flying, multi-dimensional combat. IGN describes Splitgate as \"Halo meets Portal.\"",
+            "color": "#E23816"
         }
     ]
 }
