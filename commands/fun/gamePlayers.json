@@ -20,7 +20,9 @@
                 "rocketleague",
                 "core",
                 "warframe",
-                "battlefrontii"
+                "battlefrontii",
+                "haloinfinite",
+                "splitgate"
             ]
         },
         {
@@ -56,7 +58,9 @@
                 "brawlhalla",
                 "overcooked2",
                 "reddeadonline",
-                "apexlegends"
+                "apexlegends",
+                "splitgate",
+                "haloinfinite"
             ]
         },
         {
@@ -74,7 +78,9 @@
                 "battlefrontii",
                 "brawlhalla",
                 "civvi",
-                "seaofthieves"
+                "seaofthieves",
+                "splitgate",
+                "haloinfinite"
             ]
         },
         {
@@ -91,7 +97,8 @@
                 "jackbox",
                 "amongus",
                 "krunker",
-                "astroneer"
+                "astroneer",
+                "haloinfinite"
             ]
         },
         {
@@ -108,7 +115,8 @@
                 "seaofthieves",
                 "battlefrontii",
                 "amongus",
-                "warframe"
+                "warframe",
+                "splitgate"
             ]
         },
         {
@@ -130,7 +138,9 @@
                 "arksurvivalevolved",
                 "terraria",
                 "reddeadonline",
-                "rocketleague"
+                "rocketleague",
+                "splitgate",
+                "haloinfinite"
             ]
         }
     ]
