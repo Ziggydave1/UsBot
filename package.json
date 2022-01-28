@@ -1,19 +1,33 @@
 {
   "name": "usbot",
-  "version": "1.0.0",
-  "description": "us server bot",
-  "main": "main.js",
+  "version": "2.0.0",
+  "description": "",
+  "type": "module",
+  "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ziggydave1/UsBot.git"
   },
   "author": "Evan Kaneshige",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ziggydave1/UsBot/issues"
+  },
+  "homepage": "https://github.com/Ziggydave1/UsBot#readme",
   "dependencies": {
-    "@discordjs/opus": "^0.5.0",
-    "discord.js": "^12.5.2",
-    "ffmpeg-static": "^4.3.0",
+    "@discordjs/builders": "^0.9.0",
+    "@discordjs/rest": "^0.2.0-canary.0",
+    "@tsconfig/node16": "^1.0.2",
+    "@types/string-similarity": "^4.0.0",
+    "discord-api-types": "^0.25.2",
+    "discord.js": "^13.3.1",
     "string-similarity": "^4.0.4",
-    "yt-search": "^2.7.6",
-    "ytdl-core": "^4.7.0"
+    "ts-node": "^10.4.0"
+  },
+  "devDependencies": {
+    "typescript": "^4.5.4"
   }
 }
