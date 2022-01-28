@@ -19,11 +19,11 @@ const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_
 
 client.commands = new Collection<string, Command>();
 
-console.log('📂 Reading commands...');
+console.log('📂 Reading command folder...');
 const commandFiles = readdirSync('./commands').filter(file => file.endsWith('.ts'));
-console.log('📁 Read', commandFiles.length, 'commands.');
+console.log('📁 Read command folder with', commandFiles.length, 'commands.');
 
-console.log('🔎 Registering commands...');
+console.log('🔎 Reading commands...');
 for (const file of commandFiles) {
 	const loadedCommand = await import(`./commands/${file}`);
 	const command: Command = new loadedCommand.default();
