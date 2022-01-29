@@ -10,4 +10,6 @@
     "token": "xxxxxxxx.xxxxxx.xxxxxxxxx"
   }
   ```
-* To run either `deploy-commands.ts` or `index.ts`, run `node --experimental-specifier-resolution=node --loader ts-node/esm ./file.ts`. Hopefully we can make this easier in the future.
+* To automatically create a config file, use `npm run setup [clientId [your client id]] [guildId [your guild id]] [token [your token]]`
+* To deploy commands, use `npm run deploy`
+* To run the bot, use `npm start`
