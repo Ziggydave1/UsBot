@@ -8,6 +8,7 @@
     "start": "node --experimental-specifier-resolution=node --loader ts-node/esm ./index.ts",
     "deploy": "node --experimental-specifier-resolution=node --loader ts-node/esm ./deploy-commands.ts",
     "setup": "node --experimental-specifier-resolution=node --loader ts-node/esm ./setupScript.ts",
+    "clear": "node --experimental-specifier-resolution=node --loader ts-node/esm ./clear-commands.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
