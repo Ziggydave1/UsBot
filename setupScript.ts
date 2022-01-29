@@ -1,30 +1,21 @@
 import { existsSync, writeFile } from 'fs';
-import { ExitStatus } from 'typescript';
+import promptSync from 'prompt-sync';
 
 existsSync('./config.json') ? (console.log('\n\n*********\nFile already exists\n'), process.exit()) : null;
 
-const args = process.argv.slice(2);
-let clientID, guildID, token;
+const prompt = promptSync();
 
-if (args.includes('clientId') && args.length >= args.indexOf("clientId") + 2) {
-    clientID = args[args.indexOf('clientId') + 1];
-}
-
-if (args.includes('guildId') && args.length >= args.indexOf("guildId") + 2) {
-    guildID = args[args.indexOf('guildId') + 1];
-}
-
-if (args.includes('token') && args.length >= args.indexOf("token") + 2) {
-    token = args[args.indexOf('token') + 1];
-}
+const clientId = prompt('🤖 Enter client ID: ');
+const guildId = prompt('🏘️  Enter guild ID: ');
+const token = prompt('🔑 Enter token: ');
 
 let config = `{
-    "clientId": "${clientID}",
-    "guildId": "${guildID}",
+    "clientId": "${clientId}",
+    "guildId": "${guildId}",
     "token": "${token}"
 }`
 
 writeFile('./config.json', config, function (err) {
     if (err) throw err;
-    console.log('File is created successfully.');
+    console.log('✅ Config file created successfully.');
 });
