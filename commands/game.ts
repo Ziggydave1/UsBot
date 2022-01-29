@@ -20,53 +20,28 @@ interface Range {
 }
  
 export default class GameCommand { 
-    constructor() {};                                       
-	data = new SlashCommandBuilder()
-		.setName('game')
-		.setDescription('Finds suitable games for a group of players')
-        .addUserOption(option =>
-            option.setName('player1')
-            .setDescription('The first player in the group')
-            .setRequired(true))
-        .addUserOption(option =>
-            option.setName('player2')
-            .setDescription('The second player in the group')
-            .setRequired(true))
-        .addUserOption(option =>
-            option.setName('player3')
-            .setDescription('The third player in the group')
-            .setRequired(false))
-        .addUserOption(option =>
-            option.setName('player4')
-            .setDescription('The fourth player in the group')
-            .setRequired(false))
-        .addUserOption(option =>
-            option.setName('player5')
-            .setDescription('The fifth player in the group')
-            .setRequired(false))
-        .addUserOption(option =>
-            option.setName('player6')
-            .setDescription('The sixth player in the group')
-            .setRequired(false))
+    data: SlashCommandBuilder;
+    constructor() {
+        this.data = new SlashCommandBuilder()
+            .setName('game')
+            .setDescription('Finds suitable games for a group of players');
+        const numbers = ['first', 'second', 'third', 'fourth', 'fifth', 'sixth']
+        for (let number = 1; number < 7; number++) {
+            this.data.addUserOption(option =>
+                option.setName(`player${number}`)
+                .setDescription(`The ${numbers[number - 1]} player in the group`)
+                .setRequired(number < 3));
+        }
+    };
 	async execute(interaction: CommandInteraction): Promise<void> {
         const allMembers: Collection<Snowflake, GuildMember> = await interaction.guild.members.fetch();
         const mentionedMembers = new Collection<Snowflake, GuildMember>();
-        // The exclamation points tell TypeScript that the value will never be null, which I think is a safe assumption to make.
-        mentionedMembers.set(interaction.options.getUser('player1')!.id, allMembers.find(member => member.id === interaction.options.getUser('player1').id)!);
-        mentionedMembers.set(interaction.options.getUser('player2')!.id, allMembers.find(member => member.id === interaction.options.getUser('player2').id)!);
-        if (interaction.options.getUser('player3')) {
-            mentionedMembers.set(interaction.options.getUser('player3')!.id, allMembers.find(member => member.id === interaction.options.getUser('player3').id)!);
+        for (let number = 1; number < 7; number++) {
+            const user = interaction.options.getUser(`player${number}`);
+            if (user) {
+                mentionedMembers.set(user.id, allMembers.find(member => member.id === user.id)!);
+            }
         }
-        if (interaction.options.getUser('player4')) {
-            mentionedMembers.set(interaction.options.getUser('player4')!.id, allMembers.find(member => member.id === interaction.options.getUser('player4').id)!);
-        }
-        if (interaction.options.getUser('player5')) {
-            mentionedMembers.set(interaction.options.getUser('player5')!.id, allMembers.find(member => member.id === interaction.options.getUser('player5').id)!);
-        }
-        if (interaction.options.getUser('player6')) {
-            mentionedMembers.set(interaction.options.getUser('player6')!.id, allMembers.find(member => member.id === interaction.options.getUser('player6').id)!);
-        }   
-
         let xboxNeeded = false;
         let pcNeeded = false;
 
