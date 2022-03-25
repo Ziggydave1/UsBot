@@ -51,7 +51,7 @@ export default class GameListCommand {
         let player = registeredPlayerList.players.find(p => p.id === targetUser.id);
         if (!player) {
             player = {
-                id: player.id,
+                id: targetUser.id,
                 games: []
             };
             registeredPlayerList.players.push(player);
