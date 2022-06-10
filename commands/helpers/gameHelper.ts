@@ -32,7 +32,7 @@ export function findGame(name: string): Game {
 export async function getEmojiAsync(game: Game, interaction: Interaction): Promise<GuildEmoji> {
     let emoji = interaction.guild.emojis.cache.find(emoji => emoji.name === game.id);
     if (!emoji) {
-        await interaction.guild.emojis.create(`/assets/emoji/${game.id}.png`, game.id);
+        await interaction.guild.emojis.create(`./assets/emoji/${game.id}.png`, game.id);
         emoji = interaction.guild.emojis.cache.find(emoji => emoji.name === game.id);
     }
     return emoji;
