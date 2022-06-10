@@ -422,6 +422,22 @@
             },
             "description": "Gang Beasts is a silly multiplayer party game with surly gelatinous characters, brutal slapstick fight sequences, and absurd hazardous environments, set in the mean streets of Beef City. Customize your character and fight local and online enemies in the melee game mode or fight with friends against the gangs of Beef City in the gang game mode. Gang Beasts is made by Boneloaf, a small independent game studio making a series of experimental multiplayer party games.",
             "color": "#FD92B2"
+        },
+        {
+            "name": "Human: Fall Flat",
+            "id": "HumanFallFlat",
+            "aliases": [
+                "humanfallflat",
+                "human:fallflat",
+                "human: fall flat"
+            ],
+            "crossplay": true,
+            "range": {
+                "min": 2,
+                "max": 8
+            },
+            "description": "Human: Fall Flat is a hilarious, light-hearted platformer set in floating dreamscapes that can be played solo or with up to 8 players online. Free new levels keep its vibrant community rewarded.",
+            "color": "#ABCCFF"
         }
     ]
 }
