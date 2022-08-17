@@ -438,6 +438,21 @@
             },
             "description": "Human: Fall Flat is a hilarious, light-hearted platformer set in floating dreamscapes that can be played solo or with up to 8 players online. Free new levels keep its vibrant community rewarded.",
             "color": "#ABCCFF"
+        },
+        {
+            "name": "MultiVersus",
+            "id": "MultiVersus",
+            "aliases": [
+                "multiversus",
+                "multiverses"
+            ],
+            "crossplay": true,
+            "range": {
+                "min": 2,
+                "max": 4
+            },
+            "description": "MultiVersus is a free-to-play platform fighter that lets you team up with your friends using some of the most iconic characters including Batman, Shaggy, & more!",
+            "color": "#3FADE8"
         }
     ]
 }
