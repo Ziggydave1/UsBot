@@ -1,12 +1,7 @@
 import { SlashCommandBuilder } from '@discordjs/builders';
-import { GuildMember, MessageEmbed, Snowflake, Collection, CommandInteraction, ColorResolvable } from 'discord.js';
+import { GuildMember, Snowflake, Collection, CommandInteraction, ColorResolvable, ChatInputCommandInteraction, EmbedBuilder } from 'discord.js';
 import { findGame, getEmojiAsync } from './helpers/gameHelper';
 import registeredPlayerList from './data/registeredPlayers.json' assert { type: "json" };
-
-interface Player {
-    id: string
-    games: string[]
-}
 
 export default class LfgCommand {
     constructor() {};
@@ -17,7 +12,7 @@ export default class LfgCommand {
             option.setName('game')
                 .setDescription('The name of the game to ping')
                 .setRequired(true))
-	async execute(interaction: CommandInteraction): Promise<void> {
+	async execute(interaction: ChatInputCommandInteraction): Promise<void> {
 		const game = findGame(interaction.options.getString('game'));
         let reply = '';
 
@@ -39,10 +34,10 @@ export default class LfgCommand {
 
         const gameEmoji = await getEmojiAsync(game, interaction);
 
-        const playersEmbed = new MessageEmbed()
+        const playersEmbed = new EmbedBuilder()
             .setColor(game.color as ColorResolvable)
             .setTitle(`${gameEmoji} ${game.name}`)
-            .addField('Players', reply);
+            .addFields({ name: 'Players', value: reply });
         
         interaction.reply({embeds: [playersEmbed]});
 	}

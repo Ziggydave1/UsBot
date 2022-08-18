@@ -1,5 +1,5 @@
 import { SlashCommandBuilder } from "@discordjs/builders";
-import { CommandInteraction, MessageEmbed } from "discord.js";
+import { ChatInputCommandInteraction, CommandInteraction, Embed, EmbedBuilder, InteractionResponse } from "discord.js";
 import { writeFile } from 'fs';
 import { findGame, getEmojiAsync} from './helpers/gameHelper';
 import registeredPlayerList from './data/registeredPlayers.json' assert { type: "json" };
@@ -31,7 +31,7 @@ export default class GameListCommand {
             subcommand
                 .setName('listall')
                 .setDescription('View a list of all games'))
-	async execute(interaction: CommandInteraction): Promise<void> {
+	async execute(interaction: ChatInputCommandInteraction): Promise<InteractionResponse> {
 
         if (interaction.options.getSubcommand() === 'listall') {
             let reply = '';
@@ -39,7 +39,7 @@ export default class GameListCommand {
                 const emoji = await getEmojiAsync(game, interaction);
                 reply += `${emoji} ${game.name}\n`;
             }
-            const gameEmbed = new MessageEmbed()
+            const gameEmbed = new EmbedBuilder()
                 .setColor('#C792EA')
                 .setTitle('All Games')
                 .setDescription(reply);
@@ -62,7 +62,7 @@ export default class GameListCommand {
             case 'add':
                 game = findGame(interaction.options.getString('game'));
                 if (player.games.includes(game.id.toLowerCase())) {
-                    const gameOwnedEmbed = new MessageEmbed()
+                    const gameOwnedEmbed = new EmbedBuilder()
                         .setColor('#389D59')
                         .setTitle('Game Already Owned')
                         .setDescription(`${targetUser.username} already owns ${game.name}`);
@@ -70,7 +70,7 @@ export default class GameListCommand {
                 }
                 player.games.push(game.id.toLowerCase());
                 if (this.updateRegisteredPlayerList()) {
-                    const gameAddedEmbed = new MessageEmbed()
+                    const gameAddedEmbed = new EmbedBuilder()
                         .setColor('#389D59')
                         .setTitle('Game Added')
                         .setDescription(`${targetUser.username} now owns ${game.name}`);
@@ -79,7 +79,7 @@ export default class GameListCommand {
             case 'remove':
                 game = findGame(interaction.options.getString('game'));
                 if (!player.games.includes(game.id.toLowerCase())) {
-                    const gameNotOwnedEmbed = new MessageEmbed()
+                    const gameNotOwnedEmbed = new EmbedBuilder()
                         .setColor('#389D59')
                         .setTitle('Game Not Owned')
                         .setDescription(`${targetUser.username} does not own ${game.name}`);
@@ -87,7 +87,7 @@ export default class GameListCommand {
                 }
                 player.games.splice(player.games.indexOf(game.id.toLowerCase()), 1);
                 if (this.updateRegisteredPlayerList()) {
-                    const gameRemovedEmbed = new MessageEmbed()
+                    const gameRemovedEmbed = new EmbedBuilder()
                         .setColor('#389D59')
                         .setTitle('Game Removed')
                         .setDescription(`${targetUser.username} no longer owns ${game.name}`);
@@ -101,7 +101,7 @@ export default class GameListCommand {
                     const emoji = await getEmojiAsync(game, interaction);
                     playerGames += `${emoji} ${game.name}\n`;
                 }
-                const gameListEmbed = new MessageEmbed()
+                const gameListEmbed = new EmbedBuilder()
                     .setColor('#FFB116')
                     .setTitle(`${targetUser.username}'s Game List`)
                     .setDescription(playerGames);
