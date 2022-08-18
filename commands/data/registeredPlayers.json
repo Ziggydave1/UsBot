@@ -22,7 +22,9 @@
                 "warframe",
                 "battlefrontii",
                 "haloinfinite",
-                "splitgate"
+                "splitgate",
+                "gangbeasts",
+                "humanfallflat"
             ]
         },
         {
@@ -60,7 +62,9 @@
                 "reddeadonline",
                 "apexlegends",
                 "splitgate",
-                "haloinfinite"
+                "haloinfinite",
+                "gangbeasts",
+                "humanfallflat"
             ]
         },
         {
@@ -98,7 +102,9 @@
                 "amongus",
                 "krunker",
                 "astroneer",
-                "haloinfinite"
+                "haloinfinite",
+                "gangbeasts",
+                "humanfallflat"
             ]
         },
         {
@@ -116,7 +122,8 @@
                 "battlefrontii",
                 "amongus",
                 "warframe",
-                "splitgate"
+                "splitgate",
+                "brawlhalla"
             ]
         },
         {
@@ -140,12 +147,22 @@
                 "reddeadonline",
                 "rocketleague",
                 "splitgate",
-                "haloinfinite"
+                "haloinfinite",
+                "gangbeasts",
+                "humanfallflat"
             ]
         },
         {
             "id": "399357411338616845",
-            "games": []
+            "games": [
+                "apexlegends"
+            ]
+        },
+        {
+            "id": "566474321984487436",
+            "games": [
+                "apexlegends"
+            ]
         }
     ]
 }
