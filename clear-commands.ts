@@ -1,8 +1,8 @@
 import { REST } from '@discordjs/rest';
-import { Routes } from 'discord-api-types/v9';
+import { Routes } from 'discord.js';
 import config from './config.json' assert { type: "json" };
 
-const rest = new REST({ version: '9' }).setToken(config.token);
+const rest = new REST({ version: '10' }).setToken(config.token);
 
 (async () => {
 	try {

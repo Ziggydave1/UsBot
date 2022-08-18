@@ -1,8 +1,7 @@
 // Require the necessary discord.js classes
-import { readdirSync } from 'fs';
-import { Client, Collection, CommandInteraction, Intents } from 'discord.js';
+import { readdirSync } from 'node:fs';
+import { Client, Collection, CommandInteraction, GatewayIntentBits, SlashCommandBuilder } from 'discord.js';
 import config from './config.json' assert { type: "json" };
-import { SlashCommandBuilder } from '@discordjs/builders';
 
 declare module "discord.js" {
     export interface Client {
@@ -15,7 +14,7 @@ interface Command {
 }
 
 // Create a new client instance
-const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MEMBERS] });
+const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMembers] });
 
 client.commands = new Collection<string, Command>();
 
@@ -38,9 +37,11 @@ client.once('ready', () => {
 });
 
 client.on('interactionCreate', async interaction => {
-	if (!interaction.isCommand()) return;
+	if (!interaction.isChatInputCommand()) return;
 	console.log('💬 Interaction created');
+
 	const command = client.commands.get(interaction.commandName);
+	
 	if (!command) return;
 
 	try {

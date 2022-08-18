@@ -1,5 +1,4 @@
-import { SlashCommandBuilder } from '@discordjs/builders';
-import { ColorResolvable, CommandInteraction, MessageAttachment, MessageEmbed } from 'discord.js';
+import { AttachmentBuilder, ChatInputCommandInteraction, ColorResolvable, CommandInteraction, EmbedBuilder, SlashCommandBuilder } from 'discord.js';
 import { findGame } from './helpers/gameHelper';
 
 export default class GameInfoCommand {
@@ -11,11 +10,11 @@ export default class GameInfoCommand {
             option.setName('game')
                 .setDescription('The name of the game to view information for')
                 .setRequired(true))
-	async execute(interaction: CommandInteraction): Promise<void> {
+	async execute(interaction: ChatInputCommandInteraction): Promise<void> {
 		const game = findGame(interaction.options.getString('game'));
-		const thumbnailAttachment = new MessageAttachment(`./assets/thumbnail/${game.id}.jpg`, `${game.id}_thumbnail.jpg`);
-        const imageAttachment = new MessageAttachment(`./assets/image/${game.id}.jpg`, `${game.id}_image.jpg`);
-        const gameEmbed = new MessageEmbed()
+		const thumbnailAttachment = new AttachmentBuilder(`./assets/thumbnail/${game.id}_thumbnail.jpg`);
+        const imageAttachment = new AttachmentBuilder(`./assets/image/${game.id}_image.jpg`);
+        const gameEmbed = new EmbedBuilder()
             .setColor(game.color as ColorResolvable)
             .setTitle(game.name)
             .setDescription(game.description)

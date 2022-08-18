@@ -1,9 +1,7 @@
 import { readdirSync } from 'fs';
 import { REST } from '@discordjs/rest';
-import { Routes } from 'discord-api-types/v9';
 import config from './config.json' assert { type: "json" };
-import { SlashCommandBuilder } from '@discordjs/builders';
-import { RESTPostAPIApplicationCommandsJSONBody } from '@discordjs/builders/node_modules/discord-api-types';
+import { RESTPostAPIApplicationCommandsJSONBody, Routes, SlashCommandBuilder } from 'discord.js';
 
 interface Command {
     data: SlashCommandBuilder
@@ -23,7 +21,7 @@ for (const file of commandFiles) {
 }
 console.log('🧠 Read', commands.length, 'commands.');
 
-const rest = new REST({ version: '9' }).setToken(config.token);
+const rest = new REST({ version: '10' }).setToken(config.token);
 
 (async () => {
 	try {
