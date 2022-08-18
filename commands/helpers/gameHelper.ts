@@ -1,7 +1,7 @@
 import gameList from '../data/gameList.json' assert { type: "json" };
 import stringSimilarity from 'string-similarity';
 const allGameNames = gameList.games.map(game => game.id.toLowerCase());
-import { GuildEmoji, Interaction } from 'discord.js';
+import { CommandInteraction, GuildEmoji, Interaction } from 'discord.js';
 
 interface Game {
     name: string
@@ -29,10 +29,10 @@ export function findGame(name: string): Game {
 }
 
 //Returns an emoji from a game object
-export async function getEmojiAsync(game: Game, interaction: Interaction): Promise<GuildEmoji> {
+export async function getEmojiAsync(game: Game, interaction: CommandInteraction): Promise<GuildEmoji> {
     let emoji = interaction.guild.emojis.cache.find(emoji => emoji.name === game.id);
     if (!emoji) {
-        await interaction.guild.emojis.create(`./assets/emoji/${game.id}.png`, game.id);
+        await interaction.guild.emojis.create({ attachment: `./assets/emoji/${game.id}.png`, name: game.id });
         emoji = interaction.guild.emojis.cache.find(emoji => emoji.name === game.id);
     }
     return emoji;

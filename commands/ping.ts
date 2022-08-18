@@ -1,5 +1,5 @@
 import { SlashCommandBuilder } from '@discordjs/builders';
-import { MessageEmbed, CommandInteraction } from 'discord.js';
+import { EmbedBuilder, CommandInteraction } from 'discord.js';
 
 export default class PingCommand {
 	constructor() {}
@@ -7,8 +7,7 @@ export default class PingCommand {
 		.setName('ping')
 		.setDescription('Pings the UsBot')
 	async execute(interaction: CommandInteraction): Promise<void> {
-		const embed = new MessageEmbed()
-            .setColor('BLUE')
+		const embed = new EmbedBuilder()
             .setTitle(`Pong!`)
 		interaction.reply({embeds: [embed]})
 	}

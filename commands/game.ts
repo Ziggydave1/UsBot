@@ -1,18 +1,8 @@
-import { GuildMember, Snowflake, Collection, MessageEmbed, CommandInteraction } from "discord.js";
+import { GuildMember, Snowflake, Collection, EmbedBuilder, CommandInteraction, InteractionResponse } from "discord.js";
 import { SlashCommandBuilder } from '@discordjs/builders';
 import { getEmojiAsync} from './helpers/gameHelper';
 import gameList from './data/gameList.json' assert { type: "json" };
 import registeredPlayerList from './data/registeredPlayers.json' assert { type: "json" };
-
-interface Game {
-    name: string
-    id: string
-    aliases: string[]
-    crossplay: boolean
-    range: Range
-    description: string
-    color: string
-}
   
 interface Range {
     min: number
@@ -33,7 +23,7 @@ export default class GameCommand {
                 .setRequired(number < 3));
         }
     };
-	async execute(interaction: CommandInteraction): Promise<void> {
+	async execute(interaction: CommandInteraction): Promise<InteractionResponse> {
         const allMembers: Collection<Snowflake, GuildMember> = await interaction.guild.members.fetch();
         const mentionedMembers = new Collection<Snowflake, GuildMember>();
         for (let number = 1; number < 7; number++) {
@@ -97,11 +87,11 @@ export default class GameCommand {
         //Remove the last comma and space
         playerList = playerList.slice(0, -2);
 
-        const gameEmbed = new MessageEmbed()
+        const gameEmbed = new EmbedBuilder()
             .setColor('#FFB116')
             .setTitle('Possible Games')
             .setDescription(reply)
-            .addField('Players', playerList)
+            .addFields({ name: 'Players', value: playerList })
         interaction.reply({embeds: [gameEmbed]});
 	}
 };
